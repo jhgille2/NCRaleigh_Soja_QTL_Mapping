@@ -1,3 +1,13 @@
 name|type|parent|branches|progress
-CrossData|stem|CrossData|0|started
-CrossData|stem|CrossData|0|built
+Genotype_data|stem|Genotype_data|0|started
+Genotype_data|stem|Genotype_data|0|built
+Phenotype_Data|stem|Phenotype_Data|0|started
+Phenotype_Data|stem|Phenotype_Data|0|built
+Journal|stem|Journal|0|started
+Journal|stem|Journal|0|built
+Genotype_Export|stem|Genotype_Export|0|started
+Genotype_Export|stem|Genotype_Export|0|built
+Writeup|stem|Writeup|0|started
+Writeup|stem|Writeup|0|built
+Phenotype_Export|stem|Phenotype_Export|0|started
+Phenotype_Export|stem|Phenotype_Export|0|built
