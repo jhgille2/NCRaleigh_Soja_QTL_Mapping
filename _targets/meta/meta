@@ -1,0 +1,25 @@
+name|type|data|command|depend|seed|path|time|size|bytes|format|iteration|parent|children|seconds|warnings|error
+EDA_Plots|stem|64ebc2429d8428f6|a325f97ff11b6feb|68d42ff204daddfb|-176521336||t18862.6309366291s|53fff2bfb77acd73|664429|rds|vector|||0.08||
+Phenotype_Data|stem|da30b2dea27888b8|ca9394b1418f74d1|4e3739ef91745af0|-1631356419|C:/Users/Jay/Desktop/Documents/R/Raleigh_Soja_Mapping/data/Pheno_five_locations.xlsx|t18859.5154854264s|6984f6ff3e25f262|918468|file|vector|||0||
+Genotype_data|stem|198d436784244087|d36c49bbb6cbb6a6|4e3739ef91745af0|-1683357613|C:/Users/Jay/Desktop/Documents/R/Raleigh_Soja_Mapping/data/snp_matrix.csv|t18862.8057503726s|db41057e2b563950|3505971|file|vector|||0||
+Writeup|stem|bd410b40c94104be|abfee78ae99b00b4|2b5805c1fb3507ab|-2019501384|docs/Notebook.pdf*docs/Notebook.Rmd|t18863.0812459157s|12e76953c9f22e32|187658|file|vector|||7.13||
+SNP_Conversion|stem|0fd564ca1a5474a0|5e6c795b3de73074|4e3739ef91745af0|1451550071|C:/Users/Jay/Desktop/Documents/R/Raleigh_Soja_Mapping/data/SNP_ConversionTable.csv|t18863.7776210058s|413cd439a3bf2c5e|1783625|file|vector|||0.01||
+SojaParentGeno|stem|251330f946718044|4899e9b28e129bc2|4e3739ef91745af0|-1835072384|C:/Users/Jay/Desktop/Documents/R/Raleigh_Soja_Mapping/data/sojaParent.vcf|t18863.7263821836s|9be5e30b250300bc|2254889|file|vector|||0||
+ABH_Genotypes|stem|0c5fdedb653b6401|e0407240e7ef67ef|279e805357f1cf5e|395883487||t18863.8810124679s|b93422d4262a07c7|366729|rds|vector|||5.01||
+Genotype_Export|stem|138a8486684582dc|878fa4d071bca020|0714b907a96eddca|1250031270|C:/Users/Jay/Desktop/Documents/R/Raleigh_Soja_Mapping/data/rqtl_genotypes.csv|t18863.8810289208s|6ef97a2a4278ef51|4113304|file|vector|||1.39||
+export_phenotype|function|bfa131dc1ef2b2bd||||||||||||||
+read_to_cross|function|6592b1664a420919||||||||||||||
+remove_bad_samples|function|88ada8425b6d7845||||||||||||||
+make_eda_plots|function|920d80d068e3200c||||||||||||||
+clean_genotypes|function|eabb105525a34fca||||||||||||||
+export_genotype|function|915e453a46a41a26||||||||||||||
+make_eda_tables|function|f25bcf8ac1b6966a||||||||||||||
+clean_sojaparent|function|c1ec543bda6def14||||||||||||||
+read_clean|function|979624b79384c75c||||||||||||||
+calc_geno_means|function|d211190bb1405d7e||||||||||||||
+Read_and_clean|stem|89f31f22765250d1|ff08b2f61da7e294|e1f18755edd6c2c1|-1237808111||t18862.7594468791s|814e51ed278e3d48|41525|rds|vector|||0.98|40 parsing failures.row col expected   actual261   a number standard262   a number standard263   a number standard264|
+RemoveErrors|stem|f6353c6808008c5f|57bb471df8e21a3e|07029e57b2a6ac8d|-37157053||t18862.6309190939s|f743bd3c14907950|41490|rds|vector|||0||
+EDA_tables|stem|825a16277ad3a8b1|5961b4f9a840982d|515b920bc04c85c6|-69911740||t18862.6309331795s|10da61cba4cac40f|44|rds|vector|||0||
+GenoMeans|stem|93c744bec2970a1c|e6999ad9620d177b|2d70c233e12197fe|-1655100692||t18862.6312352629s|7b265e2b03f17a25|9015|rds|vector|||25.78||
+Phenotype_Export|stem|c863cd78c2b7742b|3f79ed3858167970|bf7acfdc7d6b4613|51487610|C:/Users/Jay/Desktop/Documents/R/Raleigh_Soja_Mapping/data/rqtl_phenotypes.csv|t18863.7976583347s|586651dafa7aa56f|7237|file|vector|||0.01||
+CrossData|stem|0013df39b098dc02|a34ae411f147213d|090fb182870efe9e|1988651529||t18864.7516148312s|c3bc3d15846f0d80|280423|rds|vector|||1.58|Some chromosomes  1000 cM in length there may be a problem with the genetic map.  Perhaps it is in basepairs|

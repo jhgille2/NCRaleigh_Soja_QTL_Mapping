@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!--Created Thursday, February 13, 2020-->
+<!--By: etalier-->
+<!--On: ARSNCRAL4DT108-->
+<GenomeStudio Version="2.0.4.5">
+     <configuration>
+          <add key="Domain" value="USDA" />
+          <add key="User" value="Chuck.Quigley" />
+          <add key="ModuleName" value="Genotyping" />
+          <add key="ProjectName" value="Copy of Taliercio Soy Plate RIL19-20" />
+          <add key="Computer" value="BA45-006-103-C" />
+          <add key="AppDir" value="C:\Program Files (x86)\Illumina\GenomeStudio\" />
+          <add key="Network" value="" />
+     </configuration>
+     <Project Illumina.GenomeStudio.GenomeStudioGT.GSGTProject="Genotyping|Copy of Taliercio Soy Plate RIL19-20">
+          <Manifest Illumina.GenomeStudio.GenomeStudioGT.GTManifest="BARCSoySNP6k_11691901_A|True" />
+          <SentrixArray Illumina.GenomeStudio.GenomeStudioGT.GTSentrixArray="101070140006">
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R01C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R03C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R05C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R07C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R09C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R11C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R02C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R04C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R06C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R08C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R10C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R12C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R01C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R03C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R05C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R07C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R09C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R11C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R02C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R04C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R06C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R08C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R10C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R12C02" />
+          </SentrixArray>
+          <SentrixArray Illumina.GenomeStudio.GenomeStudioGT.GTSentrixArray="3999717004">
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R01C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R03C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R05C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R07C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R09C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R11C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R02C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R04C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R06C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R08C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R10C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R12C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R01C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R03C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R05C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R07C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R09C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R11C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R02C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R04C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R06C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R08C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R10C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R12C02" />
+          </SentrixArray>
+          <SentrixArray Illumina.GenomeStudio.GenomeStudioGT.GTSentrixArray="101070140008">
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R01C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R03C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R05C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R07C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R09C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R11C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R02C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R04C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R06C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R08C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R10C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R12C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R01C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R03C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R05C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R07C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R09C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R11C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R02C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R04C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R06C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R08C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R10C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R12C02" />
+          </SentrixArray>
+          <SentrixArray Illumina.GenomeStudio.GenomeStudioGT.GTSentrixArray="101070140024">
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R01C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R03C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R05C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R07C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R09C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R11C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R02C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R04C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R06C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R08C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R10C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R12C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R01C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R03C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R05C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R07C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R09C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R11C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R02C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R04C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R06C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R08C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R10C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R12C02" />
+          </SentrixArray>
+          <SentrixArray Illumina.GenomeStudio.GenomeStudioGT.GTSentrixArray="3999457002">
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R01C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R03C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R05C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R07C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R09C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R11C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R02C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R04C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R06C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R08C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R10C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R12C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R01C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R03C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R05C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R07C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R09C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R11C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R02C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R04C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R06C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R08C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R10C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R12C02" />
+          </SentrixArray>
+          <SentrixArray Illumina.GenomeStudio.GenomeStudioGT.GTSentrixArray="3999457005">
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R01C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R03C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R05C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R07C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R09C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R11C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R02C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R04C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R06C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R08C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R10C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R12C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R01C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R03C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R05C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R07C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R09C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R11C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R02C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R04C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R06C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R08C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R10C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R12C02" />
+          </SentrixArray>
+          <SentrixArray Illumina.GenomeStudio.GenomeStudioGT.GTSentrixArray="3999457012">
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R01C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R03C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R05C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R07C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R09C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R11C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R02C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R04C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R06C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R08C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R10C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R12C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R01C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R03C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R05C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R07C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R09C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R11C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R02C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R04C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R06C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R08C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R10C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R12C02" />
+          </SentrixArray>
+          <SentrixArray Illumina.GenomeStudio.GenomeStudioGT.GTSentrixArray="3999717005">
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R01C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R03C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R05C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R07C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R09C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R11C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R02C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R04C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R06C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R08C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R10C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R12C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R01C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R03C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R05C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R07C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R09C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R11C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R02C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R04C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R06C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R08C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R10C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R12C02" />
+          </SentrixArray>
+          <SentrixArray Illumina.GenomeStudio.GenomeStudioGT.GTSentrixArray="3999717008">
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R01C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R03C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R05C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R07C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R09C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R11C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R02C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R04C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R06C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R08C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R10C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R12C01" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R01C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R03C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R05C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R07C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R09C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R11C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R02C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R04C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R06C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R08C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R10C02" />
+               <Sample Illumina.GenomeStudio.GenomeStudioGT.GTSample="R12C02" />
+          </SentrixArray>
+     </Project>
+</GenomeStudio>
