@@ -1,13 +1,3 @@
 name|type|parent|branches|progress
-Genotype_data|stem|Genotype_data|0|started
-Genotype_data|stem|Genotype_data|0|built
-Phenotype_Data|stem|Phenotype_Data|0|started
-Phenotype_Data|stem|Phenotype_Data|0|built
-Journal|stem|Journal|0|started
-Journal|stem|Journal|0|built
-Genotype_Export|stem|Genotype_Export|0|started
-Genotype_Export|stem|Genotype_Export|0|built
-Writeup|stem|Writeup|0|started
-Writeup|stem|Writeup|0|built
-Phenotype_Export|stem|Phenotype_Export|0|started
-Phenotype_Export|stem|Phenotype_Export|0|built
+all_snp_QC|stem|all_snp_QC|0|started
+all_snp_QC|stem|all_snp_QC|0|built

@@ -4,6 +4,11 @@ source("./packages.R")
 ## Load your R files
 lapply(list.files("./R", full.names = TRUE), source)
 
+# Parallelism with future
+plan(callr)
+
+tar_option_set(error = "workspace")
+
 ## tar_plan supports drake-style targets and also tar_target()
 tar_plan(
   
@@ -81,6 +86,42 @@ tar_plan(
   tar_target(CrossData,
              read_to_cross(genoFile  = Genotype_Export,
                            phenoFile = Phenotype_Export)),
+  
+  # Remove genotypes with no phenotype data and convert the cross to a bcsft object with F.gen number of selfing generations
+  bcsft_mapped <- tar_map(
+    
+    unlist = FALSE,
+    values = tibble(fgen = c(4, 5)), 
+    
+    tar_target(bcsftCross, 
+               create_bcsft(Cross = CrossData, fgen))
+  ),
+  
+  # Combine the bcsft crosses into a list
+  tar_combine(bcsft_combined,
+              bcsft_mapped[[1]],
+              command = list(!!!.x), 
+              iteration = "list"),
+  
+  # Some marker based quality control for the crosses, return a tibble of summary stats for 
+  # the cross after applying the filters
+  cross_qc_mapped <- tar_map(
+
+    unlist = FALSE,
+    values = expand_grid(miss = c(0.1, 0.05, 0.025),
+                         seg.dist = c(0.1, 0.05, 0.025)),
+
+    tar_target(bcsft_QC,
+               apply_marker_filters(bcsft_combined, miss, seg.dist), 
+               pattern = map(bcsft_combined))
+
+    
+  ),
+  
+  # Combine all the summaries into one table. 
+  tar_combine(all_snp_QC, 
+              cross_qc_mapped[[1]], 
+              command = dplyr::bind_rows(!!!.x)),
   
   # Render the notebook and writeup
   tar_render(Writeup, 

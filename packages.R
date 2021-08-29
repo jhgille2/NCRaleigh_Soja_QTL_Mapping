@@ -21,7 +21,10 @@ pacman::p_load(conflicted,
                emmeans, 
                vroom, 
                vcfR, 
-               ASMap)
+               ASMap, 
+               job, 
+               future, 
+               future.callr)
 
 # Conflict preferences
 conflict_prefer("filter", "dplyr")

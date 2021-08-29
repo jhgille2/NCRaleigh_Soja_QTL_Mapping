@@ -1,26 +1,63 @@
 name|type|data|command|depend|seed|path|time|size|bytes|format|iteration|parent|children|seconds|warnings|error
-EDA_Plots|stem|64ebc2429d8428f6|a325f97ff11b6feb|68d42ff204daddfb|-176521336||t18862.6309366291s|53fff2bfb77acd73|664429|rds|vector|||0.08||
-SNP_Conversion|stem|0fd564ca1a5474a0|5e6c795b3de73074|4e3739ef91745af0|1451550071|C:/Users/Jay/Desktop/Documents/R/Raleigh_Soja_Mapping/data/SNP_ConversionTable.csv|t18863.7776210058s|413cd439a3bf2c5e|1783625|file|vector|||0.01||
-SojaParentGeno|stem|251330f946718044|4899e9b28e129bc2|4e3739ef91745af0|-1835072384|C:/Users/Jay/Desktop/Documents/R/Raleigh_Soja_Mapping/data/sojaParent.vcf|t18863.7263821836s|9be5e30b250300bc|2254889|file|vector|||0||
-ABH_Genotypes|stem|0c5fdedb653b6401|e0407240e7ef67ef|279e805357f1cf5e|395883487||t18863.8810124679s|b93422d4262a07c7|366729|rds|vector|||5.01||
-CrossData|stem|0013df39b098dc02|a34ae411f147213d|090fb182870efe9e|1988651529||t18864.7516148312s|c3bc3d15846f0d80|280423|rds|vector|||1.58|Some chromosomes  1000 cM in length there may be a problem with the genetic map.  Perhaps it is in basepairs|
+Journal|stem|7e7720b45a208716|856c67c617404ab8|4745aa592080ea1d|2069068383|docs/Journal.pdf*docs/Journal.Rmd|t18868.7014927518s|ec0cd550862e6261|139974|file|vector|||4.18||
+Genotype_data|stem|93de2abeeaf2048c|d36c49bbb6cbb6a6|4e3739ef91745af0|-1683357613|C:/Users/Jay/Desktop/Documents/R/NCRaleigh_Soja_QTL_Mapping/data/snp_matrix.csv|t18867.7780707204s|11706f8861b79b87|3507851|file|vector|||4.14|package future was built under R version 4.1.1|
+Phenotype_Data|stem|da30b2dea27888b8|ca9394b1418f74d1|4e3739ef91745af0|-1631356419|C:/Users/Jay/Desktop/Documents/R/NCRaleigh_Soja_QTL_Mapping/data/Pheno_five_locations.xlsx|t18859.5154854264s|6984f6ff3e25f262|918468|file|vector|||4.33|package future was built under R version 4.1.1|
+EDA_Plots|stem|bd9c543d2ecd71f0|a325f97ff11b6feb|68d42ff204daddfb|-176521336||t18868.7028440142s|7371becae75f2249|664481|rds|vector|||4.03|package future was built under R version 4.1.1|
+Writeup|stem|8079993c8e7ef7bb|9ca246d2d0eabb10|19561918ab928e9c|-2019501384|docs/Notebook.pdf*docs/Notebook.Rmd|t18868.7029107966s|91417057c9d75a9d|188085|file|vector|||5.82||
+ABH_Genotypes|stem|38b6ef71939851f6|e0407240e7ef67ef|837226d5f26772c1|395883487||t18868.7029408313s|f9988a2a4b684f0c|365511|rds|vector|||9.58|package future was built under R version 4.1.1|
+Genotype_Export|stem|138a8486684582dc|878fa4d071bca020|9d915606e157f74f|1250031270|C:/Users/Jay/Desktop/Documents/R/NCRaleigh_Soja_QTL_Mapping/data/rqtl_genotypes.csv|t18868.7030252295s|6ef97a2a4278ef51|4113304|file|vector|||5.19|package future was built under R version 4.1.1|
+CrossData|stem|0013df39b098dc02|a34ae411f147213d|090fb182870efe9e|1988651529||t18868.703323193s|c3bc3d15846f0d80|280423|rds|vector|||4.86|Some chromosomes  1000 cM in length there may be a problem with the genetic map.  Perhaps it is in basepairs|
+all_bcsft|object|e55e4cefe8368dbd||||||||||||||
+bcsft_QC_0.1_0.1_59768ae5|branch||d1d1509dbaad8276|38c7668424788b7a|-866403627||||0|rds|vector|bcsft_QC_0.1_0.1||4.22|package future was built under R version 4.1.1|Pulling of markers is not supported for this population type, see pullCross.
+bcsftCross_5|stem|5c652d014f3cc1cd|4718448443b8f196|0ddd309093fabf5f|1599480780||t18868.7525899383s|c161d9e619f3a5ab|145478|rds|vector|||228.81|package future was built under R version 4.1.1|
+bcsftCross_4|stem|544d202b15715c42|f54dfd0f7231ac0a|0ddd309093fabf5f|1561927506||t18868.7527300656s|6c870ac3febeb285|143685|rds|vector|||241.19|package future was built under R version 4.1.1|
+.Random.seed|object|7a3a9ef3c7cda176||||||||||||||
+bcsft_QC_0.1_0.1_e842d043|branch||d1d1509dbaad8276|6461a5dca7ecb8ff|-1204794832||||0|rds|vector|bcsft_QC_0.1_0.1||0||Pulling of markers is not supported for this population type, see pullCross.
+bcsft_combined|stem|b236a6b7ea4ed507|0b6c26c5f2fd25d0|b046435db5fbe19c|-127632322||t18868.7722367587s|35602ff587f60008|289076|rds|list||bcsft_combined_3e303b4b*bcsft_combined_dc7281c4|0||
+bcsft_QC_0.1_0.1|pattern|dc253a396a90b97f|d1d1509dbaad8276||-1648523419||||1040|rds|vector||bcsft_QC_0.1_0.1_acca8652*bcsft_QC_0.1_0.1_4f5b8fb2|15.1||
+bcsft_QC_0.025_0.05|pattern|efd978607ceb4873|0998c25e11b80189||1035987680||||1044|rds|vector||bcsft_QC_0.025_0.05_acca8652*bcsft_QC_0.025_0.05_4f5b8fb2|14.23||
+bcsft_QC_0.025_0.025|pattern|628f0bf577072c28|ec351ba4a1516258||773723497||||1042|rds|vector||bcsft_QC_0.025_0.025_acca8652*bcsft_QC_0.025_0.025_4f5b8fb2|14.16||
+bcsft_QC_0.025_0.1|pattern|c63b2e3443929b6f|1a97bdc02657bbb5||2047337113||||1042|rds|vector||bcsft_QC_0.025_0.1_acca8652*bcsft_QC_0.025_0.1_4f5b8fb2|13.73||
+bcsft_QC_0.05_0.025|pattern|4b30feeac4785c50|dfc8531991840a3c||1036767566||||1061|rds|vector||bcsft_QC_0.05_0.025_acca8652*bcsft_QC_0.05_0.025_4f5b8fb2|15.13||
+bcsft_QC_0.05_0.05|pattern|ea949b65bca87e4e|c5972d254b51aa78||828692193||||1048|rds|vector||bcsft_QC_0.05_0.05_acca8652*bcsft_QC_0.05_0.05_4f5b8fb2|15.38||
+bcsft_QC_0.05_0.1|pattern|431eb793e3024d4d|7c769bb6178ff2a1||-1133984252||||1065|rds|vector||bcsft_QC_0.05_0.1_acca8652*bcsft_QC_0.05_0.1_4f5b8fb2|15.12||
+bcsft_QC_0.1_0.025|pattern|ebe3e263efaaebf8|2f0f7a7f78ffdc5b||-686013120||||1050|rds|vector||bcsft_QC_0.1_0.025_acca8652*bcsft_QC_0.1_0.025_4f5b8fb2|14.08||
+bcsft_QC_0.1_0.05|pattern|8f6e8e2e031c49b8|9dca6c7fc771e1fd||-161284105||||1063|rds|vector||bcsft_QC_0.1_0.05_acca8652*bcsft_QC_0.1_0.05_4f5b8fb2|12.87||
 export_phenotype|function|bfa131dc1ef2b2bd||||||||||||||
 read_to_cross|function|6592b1664a420919||||||||||||||
-remove_bad_samples|function|88ada8425b6d7845||||||||||||||
+remove_bad_samples|function|aae70768b693b2d1||||||||||||||
 make_eda_plots|function|920d80d068e3200c||||||||||||||
+bcsft_mapped|object|8712e7677438b81f||||||||||||||
 clean_genotypes|function|eabb105525a34fca||||||||||||||
 export_genotype|function|915e453a46a41a26||||||||||||||
 make_eda_tables|function|f25bcf8ac1b6966a||||||||||||||
 clean_sojaparent|function|c1ec543bda6def14||||||||||||||
+cross_qc_mapped|object|f88f0c3a415087ec||||||||||||||
 read_clean|function|979624b79384c75c||||||||||||||
+apply_marker_filters|function|450e200de55b2d2e||||||||||||||
+create_bcsft|function|8b75f67bd11a6d6e||||||||||||||
 calc_geno_means|function|d211190bb1405d7e||||||||||||||
-Genotype_data|stem|198d436784244087|d36c49bbb6cbb6a6|4e3739ef91745af0|-1683357613|C:/Users/Jay/Desktop/Documents/R/NCRaleigh_Soja_QTL_Mapping/data/snp_matrix.csv|t18862.8057503726s|db41057e2b563950|3505971|file|vector|||0.01||
-Phenotype_Data|stem|da30b2dea27888b8|ca9394b1418f74d1|4e3739ef91745af0|-1631356419|C:/Users/Jay/Desktop/Documents/R/NCRaleigh_Soja_QTL_Mapping/data/Pheno_five_locations.xlsx|t18859.5154854264s|6984f6ff3e25f262|918468|file|vector|||0||
-Journal|stem|e330da2d76a3d976|856c67c617404ab8|4745aa592080ea1d|2069068383|docs/Journal.pdf*docs/Journal.Rmd|t18864.8613457097s|ec0cd550862e6261|139974|file|vector|||6.08||
-Read_and_clean|stem|89f31f22765250d1|ff08b2f61da7e294|e1f18755edd6c2c1|-1237808111||t18862.7594468791s|814e51ed278e3d48|41525|rds|vector|||0.98|40 parsing failures.row col expected   actual261   a number standard262   a number standard263   a number standard264|
-Genotype_Export|stem|138a8486684582dc|878fa4d071bca020|0714b907a96eddca|1250031270|C:/Users/Jay/Desktop/Documents/R/NCRaleigh_Soja_QTL_Mapping/data/rqtl_genotypes.csv|t18864.861362631s|6ef97a2a4278ef51|4113304|file|vector|||1.16||
-RemoveErrors|stem|f6353c6808008c5f|57bb471df8e21a3e|07029e57b2a6ac8d|-37157053||t18862.6309190939s|f743bd3c14907950|41490|rds|vector|||0||
-EDA_tables|stem|825a16277ad3a8b1|5961b4f9a840982d|515b920bc04c85c6|-69911740||t18862.6309331795s|10da61cba4cac40f|44|rds|vector|||0||
-GenoMeans|stem|93c744bec2970a1c|e6999ad9620d177b|2d70c233e12197fe|-1655100692||t18862.6312352629s|7b265e2b03f17a25|9015|rds|vector|||25.78||
-Writeup|stem|4dfc66c4b835f36f|9ca246d2d0eabb10|2b5805c1fb3507ab|-2019501384|docs/Notebook.pdf*docs/Notebook.Rmd|t18864.8614219597s|53e5ed77e3154afd|188189|file|vector|||5.1||
-Phenotype_Export|stem|c863cd78c2b7742b|3f79ed3858167970|bf7acfdc7d6b4613|51487610|C:/Users/Jay/Desktop/Documents/R/NCRaleigh_Soja_QTL_Mapping/data/rqtl_phenotypes.csv|t18864.8614229203s|586651dafa7aa56f|7237|file|vector|||0.01||
+Read_and_clean|stem|89f31f22765250d1|ff08b2f61da7e294|e1f18755edd6c2c1|-1237808111||t18868.7015808308s|814e51ed278e3d48|41525|rds|vector|||4.78|40 parsing failures.row col expected   actual261   a number standard262   a number standard263   a number standard264|
+RemoveErrors|stem|f6353c6808008c5f|57bb471df8e21a3e|991acc957bae6ed2|-37157053||t18868.702839535s|f743bd3c14907950|41490|rds|vector|||3.94|package future was built under R version 4.1.1|
+EDA_tables|stem|825a16277ad3a8b1|5961b4f9a840982d|515b920bc04c85c6|-69911740||t18868.7029862711s|10da61cba4cac40f|44|rds|vector|||3.92|package future was built under R version 4.1.1|
+GenoMeans|stem|93c744bec2970a1c|e6999ad9620d177b|2d70c233e12197fe|-1655100692||t18868.7031951484s|7b265e2b03f17a25|9015|rds|vector|||29.28|package future was built under R version 4.1.1|
+Phenotype_Export|stem|c863cd78c2b7742b|3f79ed3858167970|bf7acfdc7d6b4613|51487610|C:/Users/Jay/Desktop/Documents/R/NCRaleigh_Soja_QTL_Mapping/data/rqtl_phenotypes.csv|t18868.7032487943s|586651dafa7aa56f|7237|file|vector|||3.44|package future was built under R version 4.1.1|
+bcsft_QC_0.1_0.1_acca8652|branch|7d014e277efe5f2d|d1d1509dbaad8276|09e241e944941a32|761722535||t18868.7834027865s|5b78dc0f11b5c7a1|528|rds|vector|bcsft_QC_0.1_0.1||7.64|Some markers at the same position on chr 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 use jittermap.|
+bcsft_QC_0.1_0.1_4f5b8fb2|branch|03cc8c33f009c617|d1d1509dbaad8276|5b41a733134f0613|-58289874||t18868.7834058305s|0a48d1315f2197ad|512|rds|vector|bcsft_QC_0.1_0.1||7.46|Some markers at the same position on chr 1,9 use jittermap.|
+bcsft_QC_0.025_0.05_acca8652|branch|874abf9d377f33bc|0998c25e11b80189|09e241e944941a32|-199449525||t18868.7834062471s|2bca963e40c13baf|529|rds|vector|bcsft_QC_0.025_0.05||7.09|Some markers at the same position on chr 1,3,5,6,9,10,11,12,13,14,16,17,18,20 use jittermap.|
+bcsft_QC_0.025_0.05_4f5b8fb2|branch|988516c28fcb0896|0998c25e11b80189|5b41a733134f0613|1005360062||t18868.7834066407s|d931c6362b6ee884|515|rds|vector|bcsft_QC_0.025_0.05||7.14|Some markers at the same position on chr 1,9 use jittermap.|
+bcsft_QC_0.025_0.025_acca8652|branch|f814577c251ebe4b|ec351ba4a1516258|09e241e944941a32|1879138208||t18868.7834069995s|02584073a65a5b69|521|rds|vector|bcsft_QC_0.025_0.025||7.02|Some markers at the same position on chr 1,3,5,6,9,10,11,12,13,14,16,17,18,20 use jittermap.|
+bcsft_QC_0.025_0.025_4f5b8fb2|branch|43fef8769cead158|ec351ba4a1516258|5b41a733134f0613|-136071429||t18868.783513643s|02584073a65a5b69|521|rds|vector|bcsft_QC_0.025_0.025||7.14|Some markers at the same position on chr 1,9 use jittermap.|
+bcsft_QC_0.025_0.1_acca8652|branch|c1be6febd90539d0|1a97bdc02657bbb5|09e241e944941a32|216780883||t18868.7835140712s|2713ecd31269f3fd|523|rds|vector|bcsft_QC_0.025_0.1||6.92|Some markers at the same position on chr 1,3,5,6,9,10,11,12,13,14,16,17,18,20 use jittermap.|
+bcsft_QC_0.025_0.1_4f5b8fb2|branch|090fe6dc66b7f88b|1a97bdc02657bbb5|5b41a733134f0613|1239539052||t18868.7835145805s|038a11f3ec5bb5aa|519|rds|vector|bcsft_QC_0.025_0.1||6.81|Some markers at the same position on chr 1,9 use jittermap.|
+bcsft_QC_0.05_0.025_acca8652|branch|8ca71a60413ea583|dfc8531991840a3c|09e241e944941a32|-1082482006||t18868.7835268606s|a499bc0a720c1d03|534|rds|vector|bcsft_QC_0.05_0.025||7.6|Some markers at the same position on chr 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 use jittermap.|
+bcsft_QC_0.05_0.025_4f5b8fb2|branch|0a161288fc3e21cd|dfc8531991840a3c|5b41a733134f0613|1451283022||t18868.7835314208s|baf54d81357dfb87|527|rds|vector|bcsft_QC_0.05_0.025||7.53|Some markers at the same position on chr 1,9 use jittermap.|
+bcsft_QC_0.05_0.05_acca8652|branch|ef1b2a33914d2f16|c5972d254b51aa78|09e241e944941a32|-643059331||t18868.7836666065s|2f0009a747df5f48|532|rds|vector|bcsft_QC_0.05_0.05||7.72|Some markers at the same position on chr 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 use jittermap.|
+bcsft_QC_0.05_0.05_4f5b8fb2|branch|78edd0dd28df72d8|c5972d254b51aa78|5b41a733134f0613|-364267833||t18868.7836694653s|9957a5e3ddf55119|516|rds|vector|bcsft_QC_0.05_0.05||7.66|Some markers at the same position on chr 1,9 use jittermap.|
+bcsft_QC_0.05_0.1_acca8652|branch|27e4b004599fd430|7c769bb6178ff2a1|09e241e944941a32|-1403953380||t18868.7836698241s|aadb529ce9fe9359|533|rds|vector|bcsft_QC_0.05_0.1||7.62|Some markers at the same position on chr 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 use jittermap.|
+bcsft_QC_0.05_0.1_4f5b8fb2|branch|c8f5766591065a26|7c769bb6178ff2a1|5b41a733134f0613|285064445||t18868.7836702408s|2f0009a747df5f48|532|rds|vector|bcsft_QC_0.05_0.1||7.5|Some markers at the same position on chr 1,9 use jittermap.|
+bcsft_QC_0.1_0.025_acca8652|branch|d5a0ff7c8c31a080|2f0f7a7f78ffdc5b|09e241e944941a32|-935139697||t18868.7836705764s|078fc2649bd32bbc|525|rds|vector|bcsft_QC_0.1_0.025||7.6|Some markers at the same position on chr 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 use jittermap.|
+bcsft_QC_0.1_0.025_4f5b8fb2|branch|fda743bac95bf226|2f0f7a7f78ffdc5b|5b41a733134f0613|-1288518900||t18868.7837631343s|078fc2649bd32bbc|525|rds|vector|bcsft_QC_0.1_0.025||6.48|Some markers at the same position on chr 1,9 use jittermap.|
+bcsft_QC_0.1_0.05_acca8652|branch|60e12230b18f7e78|9dca6c7fc771e1fd|09e241e944941a32|1764454766||t18868.7837678681s|7bdbe5fa48d729d8|536|rds|vector|bcsft_QC_0.1_0.05||6.42|Some markers at the same position on chr 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 use jittermap.|
+bcsft_QC_0.1_0.05_4f5b8fb2|branch|a63ea74ff50eba73|9dca6c7fc771e1fd|5b41a733134f0613|-370481301||t18868.7837709238s|baf54d81357dfb87|527|rds|vector|bcsft_QC_0.1_0.05||6.45|Some markers at the same position on chr 1,9 use jittermap.|
+all_snp_QC|stem|76f0eac72ff6d056|892d35d17f524ebc|33579f5654debe47|-1098954133||t18868.7851282755s|747b3a60e937f507|2115|rds|vector|||0||

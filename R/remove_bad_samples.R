@@ -20,7 +20,7 @@ remove_bad_samples <- function(Read_and_clean) {
   # (easily identifiable) outlier
   
   Cleaned_noOutlier <- Read_and_clean %>% 
-    filter(sample_name != "LA PLOT: 255")
+    dplyr::filter(sample_name != "LA PLOT: 255")
 
   return(Cleaned_noOutlier)
 }

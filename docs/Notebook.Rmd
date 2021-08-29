@@ -29,6 +29,7 @@ tar_load(c(Read_and_clean, EDA_Plots))
 
 This document will be my journal of sorts for the development of the workflow for the analysis of the NC Raleigh x Soja mapping population. I'll try to both document the functions I make and also give results of the analysis as I go along. 
 
+
 ## Phenotype file overview
 
 The phenotype input file is **Pheno_five_locations.xlsx**. This file has measurements for the genotypes split into sheets for each of the five locations they were grown in. The three phenotypes that were measured were percent nitrogen, carbon, and sulfur content. Each sheet has additional information relevant to the measurement process like run date and time, and various standards and quantities involved in the calculation of each elemental content. 
