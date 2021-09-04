@@ -24,7 +24,7 @@ read_clean <- function(Phenotype_Data) {
       clean_names() %>% 
       # Select a subset of the columns that will be used in the analysis
       select(sample_name, 
-             code, 
+            # code, 
              wt_mg, 
              percent_nitrogen, 
              percent_carbon, 
