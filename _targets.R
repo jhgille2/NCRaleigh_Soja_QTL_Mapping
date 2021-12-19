@@ -22,7 +22,12 @@ tar_plan(
   
   # The SNP file
   tar_target(Genotype_data, 
-             here("data", "snp_matrix.csv"), 
+             here("data", "snp_matrix_AB.csv"), 
+             format = "file"),
+  
+  # A SNP file for some samples that were genotyped later
+  tar_target(New_Genotype_data, 
+             here("data", "new_samples_AB.csv"), 
              format = "file"),
   
   # # The file that has the genotypes for PI424025B (code 2105) from soybase
@@ -63,9 +68,10 @@ tar_plan(
   
   # convert the raw genotypes to ABH format using the parent genotypes
   tar_target(ABH_Genotypes, 
-             clean_genotypes(genofile = Genotype_data, 
-                             parentA = "2104", 
-                             parentB = "2105")), # Soja 
+             clean_genotypes(genofile     = Genotype_data, 
+                             new_genofile = New_Genotype_data,
+                             parentA      = "2104", 
+                             parentB      = "2105")), # Soja 
   
   ## Section: Export files for r/qtl
   ##################################################
@@ -83,51 +89,51 @@ tar_plan(
 
   # ## Section: Import to r/qtl cross
   # ##################################################
-  tar_target(CrossData,
-             read_to_cross(genoFile  = Genotype_Export,
-                           phenoFile = Phenotype_Export)),
-  
-  # Remove genotypes with no phenotype data and convert the cross to a bcsft object with F.gen number of selfing generations
-  bcsft_mapped <- tar_map(
-    
-    unlist = FALSE,
-    values = tibble(fgen = c(4, 5)), 
-    
-    tar_target(bcsftCross, 
-               create_bcsft(Cross = CrossData, fgen))
-  ),
-  
-  # Combine the bcsft crosses into a list
-  tar_combine(bcsft_combined,
-              bcsft_mapped[[1]],
-              command = list(!!!.x), 
-              iteration = "list"),
-  
-  # Some marker based quality control for the crosses, return a tibble of summary stats for 
-  # the cross after applying the filters
-  cross_qc_mapped <- tar_map(
-
-    unlist = FALSE,
-    values = expand_grid(miss = c(0.1, 0.05, 0.025),
-                         seg.dist = c(0.1, 0.05, 0.025)),
-
-    tar_target(bcsft_QC,
-               apply_marker_filters(bcsft_combined, miss, seg.dist), 
-               pattern = map(bcsft_combined))
-
-    
-  ),
-  
-  # Combine all the summaries into one table. 
-  tar_combine(all_snp_QC, 
-              cross_qc_mapped[[1]], 
-              command = dplyr::bind_rows(!!!.x)),
-  
-  # Render the notebook and writeup
-  tar_render(Writeup, 
-             here("docs", "Notebook.Rmd")),
-  
-  tar_render(Journal, 
-             here("docs", "Journal.Rmd"))
+  # tar_target(CrossData,
+  #            read_to_cross(genoFile  = Genotype_Export,
+  #                          phenoFile = Phenotype_Export)),
+  # 
+  # # Remove genotypes with no phenotype data and convert the cross to a bcsft object with F.gen number of selfing generations
+  # bcsft_mapped <- tar_map(
+  #   
+  #   unlist = FALSE,
+  #   values = tibble(fgen = c(4, 5)), 
+  #   
+  #   tar_target(bcsftCross, 
+  #              create_bcsft(Cross = CrossData, fgen))
+  # ),
+  # 
+  # # Combine the bcsft crosses into a list
+  # tar_combine(bcsft_combined,
+  #             bcsft_mapped[[1]],
+  #             command = list(!!!.x), 
+  #             iteration = "list"),
+  # 
+  # # Some marker based quality control for the crosses, return a tibble of summary stats for 
+  # # the cross after applying the filters
+  # cross_qc_mapped <- tar_map(
+  # 
+  #   unlist = FALSE,
+  #   values = expand_grid(miss = c(0.1, 0.05, 0.025),
+  #                        seg.dist = c(0.1, 0.05, 0.025)),
+  # 
+  #   tar_target(bcsft_QC,
+  #              apply_marker_filters(bcsft_combined, miss, seg.dist), 
+  #              pattern = map(bcsft_combined))
+  # 
+  #   
+  # ),
+  # 
+  # # Combine all the summaries into one table. 
+  # tar_combine(all_snp_QC, 
+  #             cross_qc_mapped[[1]], 
+  #             command = dplyr::bind_rows(!!!.x)),
+  # 
+  # # Render the notebook and writeup
+  # tar_render(Writeup, 
+  #            here("docs", "Notebook.Rmd")),
+  # 
+  # tar_render(Journal, 
+  #            here("docs", "Journal.Rmd"))
 
 )
