@@ -53,25 +53,22 @@ colnames(snpData)[2:3] <- ""
 
 write.table(snpData, file = here("data", "fullgenodata.csv"), row.names = FALSE, col.names = TRUE, sep = ",")
 
-phenofile <- read.csv(here("data", ))
-
-
-
-
-
-
-
-
 snpData_cross <- read.cross(format = "csvsr", 
                             genfile = here("data", "fullgenodata.csv"), 
                             phefile = here("data", "rqtl_phenotypes.csv"), 
                             F.gen = 4)
 
-heatMap(snpData_cross)
-
-
-snpData_cross <- pullCross(snpData_cross, type = "co.located")
-snpData_cross_segdist <- pullCross(snpData_cross, type = "seg.distortion", pars = list(seg.thresh = 0.001))
+snpData_cross          <- pullCross(snpData_cross, type = "co.located")
+snpData_cross_segdist  <- pullCross(snpData_cross, type = "seg.distortion", pars = list(seg.thresh = 0.001))
 snpData_cross_noMiss_5 <- pullCross(snpData_cross_segdist, type = "missing", pars = list("miss.thresh" = 0.05))
 
-snpData_mst_pass1 <- mstmap.cross(snpData_cross_noMiss_5, id = "id", anchor = TRUE)
+snpData_mst_pass1_anchor   <- mstmap.cross(snpData_cross_noMiss_5, id = "id", anchor = TRUE)
+snpData_mst_pass1_noanchor <- mstmap.cross(snpData_cross_noMiss_5, id = "id", anchor = FALSE)
+
+# Drop non .1 linkage groups
+lg_remainders <- as.numeric(chrnames(snpData_mst_pass1_anchor)) %% 1
+
+snpData_subsetted <- subsetCross(snpData_mst_pass1_anchor, chrnames(snpData_mst_pass1_anchor)[which(lg_remainders <= 0.11)])
+snpData_subsetted <- jittermap(snpData_subsetted)
+
+heatMap(snpData_cross)
