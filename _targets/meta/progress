@@ -2,14 +2,13 @@ name|type|parent|branches|progress
 Genotype_data|stem|Genotype_data|0|skipped
 New_Genotype_data|stem|New_Genotype_data|0|skipped
 Phenotype_Data|stem|Phenotype_Data|0|skipped
-Cleaned_Genotypes|stem|Cleaned_Genotypes|0|started
-Cleaned_Genotypes|stem|Cleaned_Genotypes|0|built
+Cleaned_Genotypes|stem|Cleaned_Genotypes|0|skipped
 Read_and_clean|stem|Read_and_clean|0|skipped
 RemoveErrors|stem|RemoveErrors|0|skipped
 EDA_tables|stem|EDA_tables|0|skipped
 EDA_Plots|stem|EDA_Plots|0|skipped
 GenoMeans|stem|GenoMeans|0|skipped
-Phenotype_Export|stem|Phenotype_Export|0|started
-Phenotype_Export|stem|Phenotype_Export|0|built
+progress_report|stem|progress_report|0|skipped
+Phenotype_Export|stem|Phenotype_Export|0|skipped
 LinkageMap|stem|LinkageMap|0|started
 LinkageMap|stem|LinkageMap|0|built

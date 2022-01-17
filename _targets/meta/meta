@@ -41,9 +41,17 @@ cross_qc_mapped|object|fee91d61acffb74e||||||||||||||
 Journal|stem|7e7720b45a208716|398fa396dc0fab1b|4745aa592080ea1d|2069068383|docs/Journal.pdf*docs/Journal.Rmd|t18868.7014927518s||139974|file|vector|||1.22|pdflatex not found|LaTeX failed to compile Journal.tex. See httpsyihui.orgtinytexrdebugging for debugging tips.
 ABH_Genotypes|stem|ea7b4282cf30cc90|f0832577e35f14df|bd8e41e222507e08|395883487||t18980.7305535158s|e971abdfae4531a5|365514|rds|vector|||2.25||
 Genotype_Export|stem|138a8486684582dc|878fa4d071bca020|c8624383f6e3b84c|1250031270|C:/Users/Jay/Documents/R/Projects/NCRaleigh_Soja_QTL_Mapping/data/rqtl_genotypes.csv|t18980.7305610433s|6ef97a2a4278ef51|4113304|file|vector|||0.6||
-Genotype_data|stem|ce76468dc5dc049e|5cb4ade354ee84d6|4e3739ef91745af0|-1683357613|C:/Users/Jay/Desktop/Documents/R/NCRaleigh_Soja_QTL_Mapping/data/snp_matrix_AB.csv|t18984.971785363s|8b47d37dd3154ed0|3505972|file|vector|||0||
-New_Genotype_data|stem|7b110452f21b2d5e|fcd88ebe0a1e1242|4e3739ef91745af0|1126238440|C:/Users/Jay/Desktop/Documents/R/NCRaleigh_Soja_QTL_Mapping/data/new_samples_AB.csv|t18984.9717845181s|731a7e42627ee0a4|165855|file|vector|||0||
-Phenotype_Data|stem|da30b2dea27888b8|ca9394b1418f74d1|4e3739ef91745af0|-1631356419|C:/Users/Jay/Desktop/Documents/R/NCRaleigh_Soja_QTL_Mapping/data/Pheno_five_locations.xlsx|t18984.9717821686s|6984f6ff3e25f262|918468|file|vector|||0.02||
+Genotype_data|stem|ce76468dc5dc049e|5cb4ade354ee84d6|4e3739ef91745af0|-1683357613|C:/Users/Jay/Documents/R/Projects/NCRaleigh_Soja_QTL_Mapping/data/snp_matrix_AB.csv|t18980.7825005524s|8b47d37dd3154ed0|3505972|file|vector|||0||
+New_Genotype_data|stem|7b110452f21b2d5e|fcd88ebe0a1e1242|4e3739ef91745af0|1126238440|C:/Users/Jay/Documents/R/Projects/NCRaleigh_Soja_QTL_Mapping/data/new_samples_AB.csv|t18980.8029433137s|731a7e42627ee0a4|165855|file|vector|||0||
+Phenotype_Data|stem|da30b2dea27888b8|ca9394b1418f74d1|4e3739ef91745af0|-1631356419|C:/Users/Jay/Documents/R/Projects/NCRaleigh_Soja_QTL_Mapping/data/Pheno_five_locations.xlsx|t18973.6240766646s|6984f6ff3e25f262|918468|file|vector|||0||
+Cleaned_Genotypes|stem|841f720fc5eb08ab|7e68c13fa5470183|666b82f35daeb68f|1423025236|C:/Users/Jay/Documents/R/Projects/NCRaleigh_Soja_QTL_Mapping/data/fullgenodata.csv|t19008.8547430487s|ed91a5211fa61312|3436234|file|vector|||4.2|NAs introduced by coercion|
+Read_and_clean|stem|89f31f22765250d1|ff08b2f61da7e294|e1f18755edd6c2c1|-1237808111||t18973.6240731516s|814e51ed278e3d48|41525|rds|vector|||4.78|40 parsing failures.row col expected   actual261   a number standard262   a number standard263   a number standard264|
+RemoveErrors|stem|f6353c6808008c5f|57bb471df8e21a3e|991acc957bae6ed2|-37157053||t18973.6240731747s|f743bd3c14907950|41490|rds|vector|||3.94|package future was built under R version 4.1.1|
+EDA_tables|stem|825a16277ad3a8b1|5961b4f9a840982d|515b920bc04c85c6|-69911740||t18973.6240731285s|10da61cba4cac40f|44|rds|vector|||3.92|package future was built under R version 4.1.1|
+EDA_Plots|stem|bd9c543d2ecd71f0|a325f97ff11b6feb|68d42ff204daddfb|-176521336||t18973.6240731285s|7371becae75f2249|664481|rds|vector|||4.03|package future was built under R version 4.1.1|
+GenoMeans|stem|22a7b68b60d3a4a5|e6999ad9620d177b|13fef5c21a486776|-1655100692||t19009.1202762691s|0d442c9d75afbc88|80830|rds|vector|||14.35||
+progress_report|stem|cea48c152b22e33a|9e0450c0d7b264b3|19561918ab928e9c|-174455922|doc/progress_report.html*doc/progress_report.Rmd|t19009.1203056074s|22ccb87458c07508|864691|file|vector|||2.53|cols is now required when using unnest.Please use cols  clab.data|
+Phenotype_Export|stem|c863cd78c2b7742b|3f79ed3858167970|729ea7dad6c79379|51487610|C:/Users/Jay/Documents/R/Projects/NCRaleigh_Soja_QTL_Mapping/data/rqtl_phenotypes.csv|t19009.1203067271s|586651dafa7aa56f|7237|file|vector|||0||
 export_phenotype|function|bfa131dc1ef2b2bd||||||||||||||
 read_to_cross|function|6592b1664a420919||||||||||||||
 remove_bad_samples|function|aae70768b693b2d1||||||||||||||
@@ -56,13 +64,6 @@ read_clean|function|979624b79384c75c||||||||||||||
 apply_marker_filters|function|450e200de55b2d2e||||||||||||||
 prep_genotype_data|function|dc03ff7ab2884d57||||||||||||||
 create_bcsft|function|8b75f67bd11a6d6e||||||||||||||
-calc_geno_means|function|d211190bb1405d7e||||||||||||||
-make_linkage_map|function|1d3f3237db388d6e||||||||||||||
-Cleaned_Genotypes|stem|841f720fc5eb08ab|7e68c13fa5470183|666b82f35daeb68f|1423025236|C:/Users/Jay/Desktop/Documents/R/NCRaleigh_Soja_QTL_Mapping/data/fullgenodata.csv|t18989.9744010756s|ed91a5211fa61312|3436234|file|vector|||7.83|NAs introduced by coercion|
-Read_and_clean|stem|89f31f22765250d1|ff08b2f61da7e294|e1f18755edd6c2c1|-1237808111||t18984.9717756755s|814e51ed278e3d48|41525|rds|vector|||4.78|40 parsing failures.row col expected   actual261   a number standard262   a number standard263   a number standard264|
-RemoveErrors|stem|f6353c6808008c5f|57bb471df8e21a3e|991acc957bae6ed2|-37157053||t18984.9717756871s|f743bd3c14907950|41490|rds|vector|||3.94|package future was built under R version 4.1.1|
-EDA_tables|stem|825a16277ad3a8b1|5961b4f9a840982d|515b920bc04c85c6|-69911740||t18984.9717756523s|10da61cba4cac40f|44|rds|vector|||3.92|package future was built under R version 4.1.1|
-EDA_Plots|stem|bd9c543d2ecd71f0|a325f97ff11b6feb|68d42ff204daddfb|-176521336||t18984.9717756408s|7371becae75f2249|664481|rds|vector|||4.03|package future was built under R version 4.1.1|
-GenoMeans|stem|93c744bec2970a1c|e6999ad9620d177b|2d70c233e12197fe|-1655100692||t18984.971775664s|7b265e2b03f17a25|9015|rds|vector|||29.28|package future was built under R version 4.1.1|
-Phenotype_Export|stem|c863cd78c2b7742b|3f79ed3858167970|bf7acfdc7d6b4613|51487610|C:/Users/Jay/Desktop/Documents/R/NCRaleigh_Soja_QTL_Mapping/data/rqtl_phenotypes.csv|t18989.9744019089s|586651dafa7aa56f|7237|file|vector|||0||
-LinkageMap|stem|4175f1ff54c1a6ef|4e36f0abf00c50e0|312506af710ba7ba|828579306||t18989.9744579739s|184fa76e9cfafe7a|83329|rds|vector|||4.8|Some chromosomes  1000 cM in length there may be a problem with the genetic map.  Perhaps it is in basepairs|
+calc_geno_means|function|40889ded88d877bd||||||||||||||
+make_linkage_map|function|8b60d955354c19b6||||||||||||||
+LinkageMap|stem|d91b392977286b04|4e36f0abf00c50e0|6d460e445b1b3249|828579306||t19009.1394687927s|f21c04bb17de2375|82219|rds|vector|||2.76|Some chromosomes  1000 cM in length there may be a problem with the genetic map.  Perhaps it is in basepairs|

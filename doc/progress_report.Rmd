@@ -1,0 +1,113 @@
+---
+title: "Untitled Draft"
+author: "Report Author"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+## target knits Rmds in their own session, so load libraries here.
+## source("here::here(packages.R"))
+```
+# Introduction
+
+This document is a summary of the analysis that has already been done and the analysis that is planned for the Raleigh x Soja mapping population. 
+
+# Progress so far
+
+## Data descriptions
+
+### Population structure
+
+The mapping population consists of 151 recombinant inbred line (RIL) soybean genotypes in the $F_4$ generation. Genotypes are identified through numeric codes that range from 1901 to 2105. Codes 2104 and 2105 are the NC Raleigh and PI 424025B (Soja) population parents respectively. The mapping population was grown in 5 locations and three main phenotypes were collected: percent carbon, percent nitrogen, and percent sulfur. The NC Raleigh genotype consistently has been observed to have a lower percent nitrogen and percent than the Soja genotype. This observation was repeated in the current study across all environments. 
+
+### Phenotypic distributions
+
+I started by just looking at the overall distributions of the phenotypes, and looked specifically for any obvious outliers or severe departures from normality. In this first set of boxplots, you can see a fairly obvious outlier in the LA environment in all the phenotypes. Because this one sample had a value that was consistently much lower than the rest of the samples, I decided that it was likely a measurement error and removed it from the rest of the analysis. Apart from this one sample, I left the rest of the measurements as they are.
+
+```{r phenoBoxplots, echo = FALSE, fig.height = 10, fig.width = 10}
+tar_load(EDA_Plots)
+
+EDA_Plots$boxplot
+```
+
+Next I looked at the distributions of the phenotypes, and also where the two parental genotypes fell on these distributions. You can see in the set of plots below that all the phenotypes are roughly normally distributed. Furthermore, you can see that the Raleigh genotype (2104) consistently has lower nitrogen and sulfur content than the Soja parent (2105). Beyond this, the plots also reveal fairly significant transgressive segregation where RILs of the mapping population have higher percent nitrogen and/or higher percent sulfur content than the Soja parent although relatively few genotypes have values in these phenotypes which are lower than those observed in the Raleigh parent. Overall, the distributions for the phenotypes looked good and I saw no signs for concern that would hinder QTL mapping.
+
+\newpage
+```{r phenoHistograms, echo = FALSE, message = FALSE, warning=FALSE, fig.height = 10, fig.width = 10}
+tar_load(Read_and_clean)
+
+AvgData_byLoc <- Read_and_clean %>% 
+  select(code, loc, percent_carbon, percent_nitrogen, percent_sulfur) %>% 
+  pivot_longer(cols = c("percent_nitrogen", "percent_carbon", "percent_sulfur"), 
+               names_to = "phenotype") %>% 
+  group_by(code, loc, phenotype) %>% 
+  summarise(avg_pheno = mean(value, na.rm = TRUE)) %>% 
+  ungroup() %>%
+  pivot_wider(names_from = phenotype, values_from = avg_pheno)
+  
+
+parent.genos <- c("2104", "2105")
+
+hist_plot_fn <- function(phe = "percent_nitrogen")
+{
+  gghistogram(AvgData_byLoc, x = phe, 
+              label = "code",
+              label.select = parent.genos,
+              facet.by = "loc", 
+              repel = TRUE, 
+              label.rectangle = TRUE, 
+              title = phe, 
+              xlab = "% composition")
+}
+
+phenos <- c("percent_carbon", "percent_nitrogen", "percent_sulfur")
+
+all_histograms <- map(phenos, hist_plot_fn)
+
+ggarrange(plotlist = all_histograms, nrow = 3)
+```
+
+### Genotypic data summary
+
+The genotype data for this mapping population comes from the SoySNP6K beadchip. This data consists of allele calls in an A/B format for 5403 SNPs for each of the 151 genotypes of the mapping population. Two seperate genotype files are used in this analysis because three samples were re-genotyped after it was observed that they had poor quality in the first set of data. The data itself is a simple matrix with rows identified by SNP names and columns identified by sample codes. The values of each SNP name x Code intersection are the allelic identity of each SNP for each code. For simplicity, I exported these calls from genomestudio using the A/B format as this would make quality control easier without sacrificing and data quality. 
+
+## Linkage mapping
+
+### Data cleaning procedures
+
+#### Phenotypes
+
+By exploring the data with boxplots and histograms I was able to find one likely measurement error. This sample was removed but the rest of the data was kept as-is. Inspection of the phenotypic distributions with histograms showed no obvious departures from normality. 
+
+To create a dataset that was ready for use with r/qtl I averaged phenotype measurements for carbon, nirtogen, sulfur, and nitrogen/sulfur ratio both within and across environments. This produces a final dataset of 24 phenotypes for each of the 151 genotypes. There are more "phenotypes" in this data because I plan to run qtl mapping within each environment so that the stability of QTL across environments can be assessed. 
+
+#### Genotypes
+
+I first merged the two genotype exports by selecting and appending the appropriate samples from the second genotyping run to the first set. The genotypes then had to be converted to the A/B/H format expected by r/qtl. I did this by replacing all alleles matching the Raleigh parent (code 2104) with the "A" genotype and all alleles matching the Soja parent with the "B" genotype. Heterozygous SNPs were easily identifiable with the "AB" call in the data and these were replaced with the "H" genotype. Missing SNP calls were identified with a "--" code in the genomestudio export. These genotypes were replaced with a "-" indicator to match the r/qtl default. SNPs were then ordered within the data following their chromosome number and physical position. I extracted this information from the SNP names which follow a common naming scheme with various information separated by underscores that can be deciphered easily using regex:
+
+$$[Chromosome\ name]\_[Physical\ position\ (bp)]\_[SNP\ allele\ 1]\_[SNP\ allele\ 2]$$
+I ordered markers by chromosome and physical position to make the mos use out of the genomic information I already had in hand and under the assumption that it would both make ordering the markers using recombination information easire, and also make potential errors in my cleaning/import process more obvious. Basically, I assumed that markers that lie physically near one another should demonstrate strong linkage and gross deviations from this would likely indicate problems with my data merging/allele coding. 
+
+I used several criteria to assess marker and genotype quality using the SNP calls. 
+
+**Marker QC**
+1. Remove monomorphic markers
+2. Rmove co-located markers and keep only the marker with the most complete data. 
+3. Remove markers with severe segregation distortion. 
+4. Remove markers with a lot of missing data (> 5%).
+
+**Genotype QC (after marker QC)**
+1. Remove genotypes with a substantial proportion of missing marker data (> 10%).
+2. Keep only one genotype from genotypic clones.
+
+### Final map statistics
+
+# Planned Analyses
+
+## Mapping
+
+## Summaries
+
+

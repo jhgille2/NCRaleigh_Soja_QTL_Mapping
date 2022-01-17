@@ -6,13 +6,24 @@
 #' @param RemoveErrors
 calc_geno_means <- function(RemoveErrors) {
 
-  # Phenotype averages by code
-  code_averages <- RemoveErrors %>% 
+  # Phenotype averages by code across locations
+  code_averages_acrossloc <- RemoveErrors %>% 
     pivot_longer(cols = tidyselect::contains("percent")) %>% 
-    group_by(code, name) %>% 
+    group_by(code, name, loc) %>% 
     summarise(pheno_avg = mean(value, na.rm = TRUE)) %>% 
     ungroup() %>% 
     pivot_wider(names_from = "name", values_from = pheno_avg)
+  
+  # Phenotype averages by code within locations
+  code_averages_byloc <- RemoveErrors %>% 
+    pivot_longer(cols = tidyselect::contains("percent")) %>% 
+    group_by(code, name, loc) %>% 
+    summarise(pheno_avg = mean(value, na.rm = TRUE)) %>% 
+    ungroup() %>% 
+    pivot_wider(names_from = c("loc", "name"), values_from = pheno_avg)
+  
+  # Join both data sets together into one to hold all the averages
+  code_averages <- left_join(code_averages_acrossloc, code_averages_byloc, by = "code")
   
   # Genotype marginal means for each phenotype
   

@@ -1,0 +1,165 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Progress Overview},
+  pdfauthor={Jay Gillenwater},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifluatex
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\title{Progress Overview}
+\author{Jay Gillenwater}
+\date{1/08/2022}
+
+\begin{document}
+\maketitle
+
+\hypertarget{introduction}{%
+\section{Introduction}\label{introduction}}
+
+This document is a summary of the analysis that has already been done
+and the analysis that is planned for the Raleigh x Soja mapping
+population.
+
+\hypertarget{progress-so-far}{%
+\section{Progress so far}\label{progress-so-far}}
+
+\hypertarget{data-descriptions}{%
+\subsection{Data descriptions}\label{data-descriptions}}
+
+\hypertarget{population-structure}{%
+\subsubsection{Population structure}\label{population-structure}}
+
+The mapping population consists of 151 recombinant inbred line (RIL)
+soybean genotypes in the \(F_4\) generation. Genotypes are identified
+through numeric codes that range from 1901 to 2105. Codes 2104 and 2105
+are the NC Raleigh and PI 424025B (Soja) population parents
+respectively.
+
+\hypertarget{phenotypic-distributions}{%
+\subsubsection{Phenotypic
+distributions}\label{phenotypic-distributions}}
+
+\newpage
+
+\begin{verbatim}
+## `summarise()` has grouped output by 'code', 'loc'. You can override using the `.groups` argument.
+\end{verbatim}
+
+\begin{verbatim}
+## Warning: Using `bins = 30` by default. Pick better value with the argument
+## `bins`.
+\end{verbatim}
+
+\begin{verbatim}
+## Warning: `cols` is now required when using unnest().
+## Please use `cols = c(lab.data)`
+\end{verbatim}
+
+\begin{verbatim}
+## Warning: Using `bins = 30` by default. Pick better value with the argument
+## `bins`.
+\end{verbatim}
+
+\begin{verbatim}
+## Warning: `cols` is now required when using unnest().
+## Please use `cols = c(lab.data)`
+\end{verbatim}
+
+\begin{verbatim}
+## Warning: Using `bins = 30` by default. Pick better value with the argument
+## `bins`.
+\end{verbatim}
+
+\begin{verbatim}
+## Warning: `cols` is now required when using unnest().
+## Please use `cols = c(lab.data)`
+\end{verbatim}
+
+\includegraphics{progress_report_files/figure-latex/phenoHistograms-1.pdf}
+
+\hypertarget{genotypic-data-summary}{%
+\subsubsection{Genotypic data summary}\label{genotypic-data-summary}}
+
+\hypertarget{linkage-mapping}{%
+\subsection{Linkage mapping}\label{linkage-mapping}}
+
+\hypertarget{data-cleaning-procedures}{%
+\subsubsection{Data cleaning
+procedures}\label{data-cleaning-procedures}}
+
+\hypertarget{phenotypes}{%
+\paragraph{Phenotypes}\label{phenotypes}}
+
+\hypertarget{genotypes}{%
+\paragraph{Genotypes}\label{genotypes}}
+
+\hypertarget{final-map-statistics}{%
+\subsubsection{Final map statistics}\label{final-map-statistics}}
+
+\hypertarget{planned-analyses}{%
+\section{Planned Analyses}\label{planned-analyses}}
+
+\hypertarget{mapping}{%
+\subsection{Mapping}\label{mapping}}
+
+\hypertarget{summaries}{%
+\subsection{Summaries}\label{summaries}}
+
+\end{document}

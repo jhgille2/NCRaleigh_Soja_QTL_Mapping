@@ -27,8 +27,10 @@ pacman::p_load(conflicted,
                future.callr, 
                rmdformats, 
                job, 
-               furrr)
+               furrr,  
+               ggpubr)
 
 # Conflict preferences
 conflict_prefer("filter", "dplyr")
 
+library(rmarkdown)

@@ -76,6 +76,10 @@ tar_plan(
                               phenodata               = Phenotype_Export, 
                               F.generation            = 4, 
                               missing_threshold       = 0.05, 
-                              segdistortion_threshold = 0.001))
+                              segdistortion_threshold = 0.001)),
+  
+  ## Section: Document rendering
+  ##################################################
+  tar_render(progress_report, "doc/progress_report.Rmd")
 
 )

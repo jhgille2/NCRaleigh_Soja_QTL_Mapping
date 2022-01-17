@@ -1,0 +1,83 @@
+---
+title: "Progress Overview"
+author: "Jay Gillenwater"
+date: "1/08/2022"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(targets)
+library(ggpubr)
+```
+
+# Introduction
+
+This document is a summary of the analysis that has already been done and the analysis that is planned for the Raleigh x Soja mapping population. 
+
+# Progress so far
+
+## Data descriptions
+
+### Population structure
+
+The mapping population consists of 151 recombinant inbred line (RIL) soybean genotypes in the $F_4$ generation. Genotypes are identified through numeric codes that range from 1901 to 2105. Codes 2104 and 2105 are the NC Raleigh and PI 424025B (Soja) population parents respectively. 
+
+### Phenotypic distributions
+
+\newpage
+```{r phenoHistograms, echo = FALSE}
+tar_load(Read_and_clean)
+
+AvgData_byLoc <- Read_and_clean %>% 
+  select(code, loc, percent_carbon, percent_nitrogen, percent_sulfur) %>% 
+  pivot_longer(cols = c("percent_nitrogen", "percent_carbon", "percent_sulfur"), 
+               names_to = "phenotype") %>% 
+  group_by(code, loc, phenotype) %>% 
+  summarise(avg_pheno = mean(value, na.rm = TRUE)) %>% 
+  ungroup() %>%
+  pivot_wider(names_from = phenotype, values_from = avg_pheno)
+  
+
+parent.genos <- c("2104", "2105")
+
+hist_plot_fn <- function(phe = "percent_nitrogen")
+{
+  gghistogram(AvgData_byLoc, x = phe, 
+              label = "code",
+              label.select = parent.genos,
+              facet.by = "loc", 
+              repel = TRUE, 
+              label.rectangle = TRUE, 
+              title = phe, 
+              xlab = "% composition")
+}
+
+phenos <- c("percent_carbon", "percent_nitrogen", "percent_sulfur")
+
+all_histograms <- map(phenos, hist_plot_fn)
+
+ggarrange(plotlist = all_histograms, nrow = 3)
+```
+
+### Genotypic data summary
+
+## Linkage mapping
+
+### Data cleaning procedures
+
+#### Phenotypes
+
+#### Genotypes
+
+### Final map statistics
+
+# Planned Analyses
+
+## Mapping
+
+## Summaries
+
+
+
+

@@ -27,14 +27,51 @@ make_linkage_map <- function(genodata = Cleaned_Genotypes, phenodata =
   snpData_cross          <- pullCross(snpData_cross, type = "co.located")
   snpData_cross_segdist  <- pullCross(snpData_cross, type = "seg.distortion", pars = list(seg.thresh = 0.001))
   snpData_cross_noMiss_5 <- pullCross(snpData_cross_segdist, type = "missing", pars = list("miss.thresh" = 0.05))
+  
+  # Genotype clones
+  gc <- genClones(snpData_cross_noMiss_5, id = "id")
+  
+  # Remove clones
+  snpData_cross_noMiss_5 <- fixClones(snpData_cross_noMiss_5, 
+                                      gc$cgd, 
+                                      consensus = TRUE, 
+                                      id = "id")
+  
+  # Remove any individuals with more than 10% missing marker data
+  sg_miss <- statGen(snpData_cross_noMiss_5, id = "id", stat.type = "miss", bychr = FALSE)
+  snpData_cross_noMiss_5 <- subset(snpData_cross_noMiss_5, ind = sg_miss$miss < sum(nmar(snpData_cross_noMiss_5)) * 0.1)
 
   # Estimate the linkage map and keep the markers in their physical order
   snpData_mst_pass1_anchor   <- mstmap.cross(snpData_cross_noMiss_5, id = "id", anchor = TRUE)
   
+  # Chromosomes to keep 
+  keep_chrs <- c("1.1", 
+                 "2.1", 
+                 "3.1", 
+                 "4", 
+                 "5.2", 
+                 "6.1", 
+                 "7.1", 
+                 "8.1", 
+                 "9.1", 
+                 "10.1", 
+                 "11.1", 
+                 "12.2", 
+                 "13.1", 
+                 "14", 
+                 "15.1", 
+                 "16.1", 
+                 "17.1", 
+                 "18.1", 
+                 "19.1", 
+                 "20.1")
+  
   # Subset the map and keep only the markers that group to the main chromosomes
   lg_remainders <- as.numeric(chrnames(snpData_mst_pass1_anchor)) %% 1
   
-  snpData_subsetted <- subsetCross(snpData_mst_pass1_anchor, chrnames(snpData_mst_pass1_anchor)[which(lg_remainders <= 0.11)])
+  snpData_subsetted             <- subsetCross(snpData_mst_pass1_anchor, keep_chrs)
+  names(snpData_subsetted$geno) <- as.character(c(1:20))
+  
   snpData_subsetted <- jittermap(snpData_subsetted)
   
   return(snpData_subsetted)
