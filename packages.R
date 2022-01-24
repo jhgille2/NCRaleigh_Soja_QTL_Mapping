@@ -28,7 +28,14 @@ pacman::p_load(conflicted,
                rmdformats, 
                job, 
                furrr,  
-               ggpubr)
+               ggpubr, 
+               gridExtra, 
+               kableExtra, 
+               furrr, 
+               progressr, 
+               tictoc, 
+               snow, 
+               parallel)
 
 # Conflict preferences
 conflict_prefer("filter", "dplyr")

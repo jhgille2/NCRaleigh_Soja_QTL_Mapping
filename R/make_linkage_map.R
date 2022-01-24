@@ -42,7 +42,9 @@ make_linkage_map <- function(genodata = Cleaned_Genotypes, phenodata =
   snpData_cross_noMiss_5 <- subset(snpData_cross_noMiss_5, ind = sg_miss$miss < sum(nmar(snpData_cross_noMiss_5)) * 0.1)
 
   # Estimate the linkage map and keep the markers in their physical order
-  snpData_mst_pass1_anchor   <- mstmap.cross(snpData_cross_noMiss_5, id = "id", anchor = TRUE)
+  snpData_mst_pass1_anchor   <- mstmap.cross(snpData_cross_noMiss_5, 
+                                             id = "id", 
+                                             anchor = TRUE)
   
   # Chromosomes to keep 
   keep_chrs <- c("1.1", 

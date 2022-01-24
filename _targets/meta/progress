@@ -8,7 +8,8 @@ RemoveErrors|stem|RemoveErrors|0|skipped
 EDA_tables|stem|EDA_tables|0|skipped
 EDA_Plots|stem|EDA_Plots|0|skipped
 GenoMeans|stem|GenoMeans|0|skipped
-progress_report|stem|progress_report|0|skipped
 Phenotype_Export|stem|Phenotype_Export|0|skipped
 LinkageMap|stem|LinkageMap|0|started
 LinkageMap|stem|LinkageMap|0|built
+LinkageMapSummaries|stem|LinkageMapSummaries|0|skipped
+progress_report|stem|progress_report|0|skipped

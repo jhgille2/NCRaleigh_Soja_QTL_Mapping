@@ -5,7 +5,6 @@ all_bcsft|object|e55e4cefe8368dbd||||||||||||||
 bcsft_QC_0.1_0.1_59768ae5|branch||d1d1509dbaad8276|38c7668424788b7a|-866403627||||0|rds|vector|bcsft_QC_0.1_0.1||4.22|package future was built under R version 4.1.1|Pulling of markers is not supported for this population type, see pullCross.
 bcsftCross_5|stem|5c652d014f3cc1cd|4718448443b8f196|0ddd309093fabf5f|1599480780||t18868.7525899383s|c161d9e619f3a5ab|145478|rds|vector|||228.81|package future was built under R version 4.1.1|
 bcsftCross_4|stem|544d202b15715c42|f54dfd0f7231ac0a|0ddd309093fabf5f|1561927506||t18868.7527300656s|6c870ac3febeb285|143685|rds|vector|||241.19|package future was built under R version 4.1.1|
-.Random.seed|object|7a3a9ef3c7cda176||||||||||||||
 bcsft_QC_0.1_0.1_e842d043|branch||d1d1509dbaad8276|6461a5dca7ecb8ff|-1204794832||||0|rds|vector|bcsft_QC_0.1_0.1||0||Pulling of markers is not supported for this population type, see pullCross.
 bcsft_combined|stem|b236a6b7ea4ed507|0b6c26c5f2fd25d0|b046435db5fbe19c|-127632322||t18868.7722367587s|35602ff587f60008|289076|rds|list||bcsft_combined_3e303b4b*bcsft_combined_dc7281c4|0||
 bcsft_QC_0.1_0.1|pattern|dc253a396a90b97f|d1d1509dbaad8276||-1648523419||||1040|rds|vector||bcsft_QC_0.1_0.1_acca8652*bcsft_QC_0.1_0.1_4f5b8fb2|15.1||
@@ -49,21 +48,24 @@ Read_and_clean|stem|89f31f22765250d1|ff08b2f61da7e294|e1f18755edd6c2c1|-12378081
 RemoveErrors|stem|f6353c6808008c5f|57bb471df8e21a3e|991acc957bae6ed2|-37157053||t18973.6240731747s|f743bd3c14907950|41490|rds|vector|||3.94|package future was built under R version 4.1.1|
 EDA_tables|stem|825a16277ad3a8b1|5961b4f9a840982d|515b920bc04c85c6|-69911740||t18973.6240731285s|10da61cba4cac40f|44|rds|vector|||3.92|package future was built under R version 4.1.1|
 EDA_Plots|stem|bd9c543d2ecd71f0|a325f97ff11b6feb|68d42ff204daddfb|-176521336||t18973.6240731285s|7371becae75f2249|664481|rds|vector|||4.03|package future was built under R version 4.1.1|
-GenoMeans|stem|22a7b68b60d3a4a5|e6999ad9620d177b|13fef5c21a486776|-1655100692||t19009.1202762691s|0d442c9d75afbc88|80830|rds|vector|||14.35||
-progress_report|stem|cea48c152b22e33a|9e0450c0d7b264b3|19561918ab928e9c|-174455922|doc/progress_report.html*doc/progress_report.Rmd|t19009.1203056074s|22ccb87458c07508|864691|file|vector|||2.53|cols is now required when using unnest.Please use cols  clab.data|
-Phenotype_Export|stem|c863cd78c2b7742b|3f79ed3858167970|729ea7dad6c79379|51487610|C:/Users/Jay/Documents/R/Projects/NCRaleigh_Soja_QTL_Mapping/data/rqtl_phenotypes.csv|t19009.1203067271s|586651dafa7aa56f|7237|file|vector|||0||
-export_phenotype|function|bfa131dc1ef2b2bd||||||||||||||
+GenoMeans|stem|cdc56780b182eeb1|e6999ad9620d177b|d20c712f979657fd|-1655100692||t19015.92441355s|b507d77fabd25ce5|48863|rds|vector|||13.66||
+Phenotype_Export|stem|e90e406dda5ce984|3f79ed3858167970|878466a2a90b0d19|51487610|C:/Users/Jay/Documents/R/Projects/NCRaleigh_Soja_QTL_Mapping/data/rqtl_phenotypes.csv|t19015.9244142209s|41bd94628c32f47a|40251|file|vector|||0.02||
+LinkageMapSummaries|stem|d74919b19c9f1001|581dcbfec3e6992a|eeb82a27eb1d4d75|313265344||t19015.9244427404s|607ca56a8b211efc|569|rds|vector|||0||
+progress_report|stem|db2e7628ed63435a|5a069ebda38ae72a|f7af0286b530938a|-174455922|doc/progress_report.html*doc/progress_report.Rmd|t19015.9245016391s|8afd503f2a0d2d0a|1036647|file|vector|||5.11|cols is now required when using unnest.Please use cols  clab.data|
+export_phenotype|function|175465c5da05cb02||||||||||||||
 read_to_cross|function|6592b1664a420919||||||||||||||
 remove_bad_samples|function|aae70768b693b2d1||||||||||||||
 make_eda_plots|function|920d80d068e3200c||||||||||||||
 clean_genotypes|function|68def2625d7147b2||||||||||||||
 export_genotype|function|915e453a46a41a26||||||||||||||
 make_eda_tables|function|f25bcf8ac1b6966a||||||||||||||
+.Random.seed|object|e87ef4543b135ffb||||||||||||||
+summarise_linkage_map|function|7f40238ebae5cce2||||||||||||||
 clean_sojaparent|function|c1ec543bda6def14||||||||||||||
 read_clean|function|979624b79384c75c||||||||||||||
 apply_marker_filters|function|450e200de55b2d2e||||||||||||||
 prep_genotype_data|function|dc03ff7ab2884d57||||||||||||||
 create_bcsft|function|8b75f67bd11a6d6e||||||||||||||
-calc_geno_means|function|40889ded88d877bd||||||||||||||
+calc_geno_means|function|9d8334a3c19682a9||||||||||||||
 make_linkage_map|function|8b60d955354c19b6||||||||||||||
-LinkageMap|stem|d91b392977286b04|4e36f0abf00c50e0|6d460e445b1b3249|828579306||t19009.1394687927s|f21c04bb17de2375|82219|rds|vector|||2.76|Some chromosomes  1000 cM in length there may be a problem with the genetic map.  Perhaps it is in basepairs|
+LinkageMap|stem|9359d841a477783e|4e36f0abf00c50e0|8aca159817f77cb5|828579306||t19015.9530077948s|27b97e465162157c|101166|rds|vector|||2.69|Some chromosomes  1000 cM in length there may be a problem with the genetic map.  Perhaps it is in basepairs|

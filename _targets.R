@@ -71,12 +71,18 @@ tar_plan(
   
   # ## Section: Linkage mapping
   # ##################################################
+  
+  # Make the linkage map
   tar_target(LinkageMap, 
              make_linkage_map(genodata                = Cleaned_Genotypes, 
                               phenodata               = Phenotype_Export, 
                               F.generation            = 4, 
                               missing_threshold       = 0.05, 
                               segdistortion_threshold = 0.001)),
+  
+  # Some summary table about the linkage map
+  tar_target(LinkageMapSummaries, 
+             summarise_linkage_map(lmap = LinkageMap)),
   
   ## Section: Document rendering
   ##################################################

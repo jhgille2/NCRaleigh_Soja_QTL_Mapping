@@ -1,0 +1,393 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Mapping analysis progress and plans},
+  pdfauthor={Jay Gillenwater},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifluatex
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\title{Mapping analysis progress and plans}
+\author{Jay Gillenwater}
+\date{18 January, 2022}
+
+\begin{document}
+\maketitle
+
+\hypertarget{introduction}{%
+\section{Introduction}\label{introduction}}
+
+This document is a summary of the analysis that has already been done
+and the analysis that is planned for the Raleigh x Soja mapping
+population.
+
+\hypertarget{progress-so-far}{%
+\section{Progress so far}\label{progress-so-far}}
+
+\hypertarget{data-descriptions}{%
+\subsection{Data descriptions}\label{data-descriptions}}
+
+\hypertarget{population-structure}{%
+\subsubsection{Population structure}\label{population-structure}}
+
+The mapping population consists of 151 recombinant inbred line (RIL)
+soybean genotypes in the \(F_4\) generation. Genotypes are identified
+through numeric codes that range from 1901 to 2105. Codes 2104 and 2105
+are the NC Raleigh and PI 424025B (Soja) population parents
+respectively. The mapping population was grown in 5 locations and three
+main phenotypes were collected: percent carbon, percent nitrogen, and
+percent sulfur. The NC Raleigh genotype consistently has been observed
+to have a lower percent nitrogen and percent than the Soja genotype.
+This observation was repeated in the current study across all
+environments.
+
+\hypertarget{phenotypic-distributions}{%
+\subsubsection{Phenotypic
+distributions}\label{phenotypic-distributions}}
+
+I started by just looking at the overall distributions of the
+phenotypes, and looked specifically for any obvious outliers or severe
+departures from normality. In this first set of boxplots, you can see a
+fairly obvious outlier in the LA environment in all the phenotypes.
+Because this one sample had a value that was consistently much lower
+than the rest of the samples, I decided that it was likely a measurement
+error and removed it from the rest of the analysis. Apart from this one
+sample, I left the rest of the measurements as they are.
+
+\includegraphics{progress_report_files/figure-latex/phenoBoxplots-1.pdf}
+
+Next I looked at the distributions of the phenotypes, and also where the
+two parental genotypes fell on these distributions. You can see in the
+set of plots below that all the phenotypes are roughly normally
+distributed. Furthermore, you can see that the Raleigh genotype (2104)
+consistently has lower nitrogen and sulfur content than the Soja parent
+(2105). Beyond this, the plots also reveal fairly significant
+transgressive segregation where RILs of the mapping population have
+higher percent nitrogen and/or higher percent sulfur content than the
+Soja parent although relatively few genotypes have values in these
+phenotypes which are lower than those observed in the Raleigh parent.
+Overall, the distributions for the phenotypes looked close to normal.
+
+\newpage
+
+\includegraphics{progress_report_files/figure-latex/phenoHistograms-1.pdf}
+
+\hypertarget{genotypic-data-summary}{%
+\subsubsection{Genotypic data summary}\label{genotypic-data-summary}}
+
+The genotype data for this mapping population comes from the SoySNP6K
+beadchip. This data consists of allele calls in an A/B format for 5403
+SNPs for each of the 151 genotypes of the mapping population. Two
+separate genotype files are used in this analysis because three samples
+were re-genotyped after it was observed that they had poor quality in
+the first set of data. The data itself is a simple matrix with rows
+identified by SNP names and columns identified by sample codes. The
+values of each SNP name x Code intersection are the allelic identity of
+each SNP for each code. For simplicity, I exported these calls from
+genomestudio using the A/B format as this would make quality control
+easier without sacrificing the data quality.
+
+\hypertarget{linkage-mapping}{%
+\subsection{Linkage mapping}\label{linkage-mapping}}
+
+\hypertarget{data-cleaning-procedures}{%
+\subsubsection{Data cleaning
+procedures}\label{data-cleaning-procedures}}
+
+\hypertarget{phenotypes}{%
+\paragraph{Phenotypes}\label{phenotypes}}
+
+By exploring the data with boxplots and histograms I was able to find
+one likely measurement error. This sample was removed but the rest of
+the data was kept as-is. Inspection of the phenotypic distributions with
+histograms showed no obvious departures from normality.
+
+To create a dataset that was ready for use with r/qtl I averaged
+phenotype measurements for carbon, nirtogen, sulfur, and nitrogen/sulfur
+ratio both within and across environments. This produces a final dataset
+of 24 phenotypes for each of the 151 genotypes. There are more
+``phenotypes'' in this data because I plan to run qtl mapping within
+each environment so that the stability of QTL across environments can be
+assessed.
+
+\hypertarget{genotypes}{%
+\paragraph{Genotypes}\label{genotypes}}
+
+I first merged the two genotype exports by selecting and appending the
+appropriate samples from the second genotyping run to the first set. The
+genotypes then had to be converted to the A/B/H format expected by
+r/qtl. I did this by replacing all alleles matching the Raleigh parent
+(code 2104) with the ``A'' genotype and all alleles matching the Soja
+parent with the ``B'' genotype. Heterozygous SNPs were easily
+identifiable with the ``AB'' call in the data and these were replaced
+with the ``H'' genotype. Missing SNP calls were identified with a ``--''
+code in the genomestudio export. These genotypes were replaced with a
+``-'' indicator to match the r/qtl default. SNPs were then ordered
+within the data following their chromosome number and physical position.
+I extracted this information from the SNP names which follow a common
+naming scheme with various information separated by underscores that can
+be deciphered easily using regex:
+
+\[[Chromosome\ name]\_[Physical\ position\ (bp)]\_[SNP\ allele\ 1]\_[SNP\ allele\ 2]\]
+I ordered markers by chromosome and physical position to make the most
+use out of the genomic information I already had in hand and under the
+assumption that it would both make ordering the markers using
+recombination information easier, and also make potential errors in my
+cleaning/import process more obvious. Basically, I assumed that markers
+that lie physically near one another should demonstrate strong linkage
+and gross deviations from this would likely indicate problems with my
+data merging/allele coding.
+
+I used several criteria to assess marker and genotype quality using the
+SNP calls.
+
+\textbf{Marker QC}\\
+1. Remove monomorphic markers.\\
+2. Remove co-located markers and keep only the marker with the most
+complete data.\\
+3. Remove markers with severe segregation distortion.\\
+4. Remove markers with a lot of missing data (\textgreater{} 5\%).
+
+\textbf{Genotype QC (after marker QC)}\\
+1. Remove genotypes with a substantial proportion of missing marker data
+(\textgreater{} 10\%).\\
+2. Keep only one genotype from genotypic clones.
+
+I performed marker quality control with the
+\href{https://rdrr.io/cran/ASMap/man/pullCross.html}{pullCross} and
+\href{https://rdrr.io/cran/ASMap/man/pushCross.html}{pushCross}
+functions from the ASMap package. These are essentially helpful wrappers
+for functions from r/qtl to pull aside and put back markers that meet
+certain criteria. The functions let you filter co located, distorted,
+and missing markers with the option of easily putting back some (or all)
+of the markers later on to see how different thresholds affect the final
+linkage map. This is nicer than pure r/qtl because it lets you work with
+one object instead of having to make many new ones for each threshold
+combination.
+
+For genotype statistics, I used the
+\href{https://rdrr.io/cran/ASMap/man/statGen.html}{statGen} function,
+also from ASMap. This function lets you calculate many genotype level
+statistics that can then be used to subset the cross. For finding and
+fixing genetic clones, I used the
+\href{https://rdrr.io/cran/ASMap/man/genClones.html}{genClones} and
+(fixClones){[}\url{https://rdrr.io/cran/ASMap/man/fixClones.html}{]}
+functions, respectively. Essentially these two functions first compare
+the genotypes of all the individuals in the cross and return groups
+which have very similar genotypes. The fixClones function can then be
+used to retain only one genotype from each group.
+
+\begin{quote}
+The genClones function indicated that samples 2104 and 2105 were genetic
+clones. Maybe sample 2104 was mislabeled in the first genotyping run?
+\end{quote}
+
+For the actual mapping I used the mastmap.cross function from ASMap with
+the Kosambi distance function.
+
+\hypertarget{final-map-statistics}{%
+\subsubsection{Final map statistics}\label{final-map-statistics}}
+
+The final map has 20 linkage groups corresponding to the 20 chromosomes
+of the soybean genome. There are a total of 1764 markers with 99.92\% of
+the markers genotyped. 43.95\% of the SNP genotypes are homozygous A,
+12.93\% of the genotypes are heterozygous, and 43.12\% of the genotypes
+are homozygous B. A total of 135 RIL genotypes remain after filtering
+out genotypes with greater than 10\% missing data and retaining only one
+genotype from sets of genetic clones.
+
+\begin{table}
+\centering
+\begin{tabular}[t]{l|r|r|r}
+\hline
+Chromosome & Number of markers & Average marker spacing (cM) & LG size (cM)\\
+\hline
+1 & 85.0 & 1.400 & 117.9600\\
+\hline
+2 & 115.0 & 1.600 & 182.6200\\
+\hline
+3 & 84.0 & 1.550 & 128.3500\\
+\hline
+4 & 85.0 & 1.560 & 131.3300\\
+\hline
+5 & 82.0 & 1.500 & 121.5100\\
+\hline
+6 & 92.0 & 1.830 & 166.5800\\
+\hline
+7 & 93.0 & 1.660 & 152.6700\\
+\hline
+8 & 116.0 & 1.600 & 183.4700\\
+\hline
+9 & 80.0 & 1.350 & 106.6700\\
+\hline
+10 & 101.0 & 1.480 & 147.9700\\
+\hline
+11 & 85.0 & 2.160 & 181.2600\\
+\hline
+12 & 65.0 & 1.670 & 107.1800\\
+\hline
+13 & 117.0 & 1.610 & 187.2000\\
+\hline
+14 & 76.0 & 1.730 & 129.8500\\
+\hline
+15 & 88.0 & 1.730 & 150.8400\\
+\hline
+16 & 72.0 & 1.610 & 114.6400\\
+\hline
+17 & 77.0 & 1.950 & 148.3200\\
+\hline
+18 & 101.0 & 1.690 & 169.4400\\
+\hline
+19 & 74.0 & 1.970 & 143.6200\\
+\hline
+20 & 76.0 & 2.010 & 150.6500\\
+\hline
+Average & 88.2 & 1.683 & 146.1065\\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{center}\includegraphics{progress_report_files/figure-latex/MapSummaryTable-1} \end{center}
+
+\begin{center}\includegraphics{progress_report_files/figure-latex/MapSummaryTable-2} \end{center}
+
+\hypertarget{planned-analyses}{%
+\section{Planned Analyses}\label{planned-analyses}}
+
+\hypertarget{mapping}{%
+\subsection{Mapping}\label{mapping}}
+
+For QTL mapping, I'll start with simple interval mapping to detect large
+effect QTL. Likely this will only find a few QTL with large consistent
+effects. I've run this on a couple of the traits already and was able to
+find a large effect QTL on chr 20 at the site where many qtl have been
+previously reported for protein/oil so I wasn't very surprised to see
+one there for nitrogen content. Simple interval mapping won't take long,
+even with the large number of traits so I figured it would be a good
+starting point for the mapping analysis.
+
+However, for the main portion, I want to use the multiple interval
+mapping (MIM) capabilities in r/qtl. I want to do this because from the
+tools available, it offers the best opportunity to find more QTL with
+smaller effects, and to also explore potential interactions among QTL.
+There are a few computational challenges with this approach though so
+I'll go through them and how I propose to solve them.
+
+Fitting the MIM models requires a permutation test for each phenotype
+before the model can be fit. Each of these permutation tests takes a
+while and one has to be done for each phenotype.
+
+Fitting the multiple QTL models requires complete genetic information.
+This is solved in r/qtl through multiple imputation where gaps in the
+map are filled in with imputations that are made conditional on the
+observed marker data. To find the appropriate number of imputations to
+use, the authors recommend performing some number of imputations,
+fitting a MIM model, and then increasing the number of imputations and
+fitting the model again to see if the results change. If the results
+change, then increase the number of imputations until they don't. The
+cost of more imputations is exponentially greater computational time and
+memory consumption so I want to find a balance between performance and
+accuracy. This also has to be done for each phenotype.
+
+From experience, I think the permutation tests will be the most time
+consuming part of this since we'll have to do a large number
+(\textgreater1000) to meet publication standards. I think the best
+approach would be to do them in batches by phenotype so that the models
+can then in turn be fit by phenotype.
+
+\hypertarget{main-points}{%
+\subsubsection{Main points}\label{main-points}}
+
+\begin{itemize}
+\tightlist
+\item
+  The map overall looks good. Lots of markers pass reasonable thresholds
+  and map to reasonable locations and orders. Small marker spacing and
+  also good overall coverage of the genome.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    The markers for samples 2104 from the first set seem to match 2105
+    from the second set + the historical records from the 50K chip.
+    Maybe mislabeled sample in the first batch? Otherwise segregation
+    matches what would be expected.
+  \end{itemize}
+\item
+  Initial scans indicate the presence of QTL but detecting additional
+  smaller QTL will need the more time consuming multiple interval
+  mapping techniques.
+\item
+  Finding the appropriate number of imputations and getting significance
+  thresholds from permutation tests will take time but is
+  straightforward from a technical standpoint (speed is limited mainly
+  by access to computational resources).
+\item
+  If there is a trait that is a priority, I can ``chunk'' the analysis
+  to get the results for the more important traits first.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Starting with overall averages across environments is also an
+    option.
+  \end{itemize}
+\end{itemize}
+
+\end{document}

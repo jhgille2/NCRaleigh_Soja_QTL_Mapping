@@ -9,7 +9,7 @@ calc_geno_means <- function(RemoveErrors) {
   # Phenotype averages by code across locations
   code_averages_acrossloc <- RemoveErrors %>% 
     pivot_longer(cols = tidyselect::contains("percent")) %>% 
-    group_by(code, name, loc) %>% 
+    group_by(code, name) %>% 
     summarise(pheno_avg = mean(value, na.rm = TRUE)) %>% 
     ungroup() %>% 
     pivot_wider(names_from = "name", values_from = pheno_avg)

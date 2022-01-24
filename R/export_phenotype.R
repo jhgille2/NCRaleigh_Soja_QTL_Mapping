@@ -9,7 +9,7 @@ export_phenotype <- function(filepath = here("data", "rqtl_phenotypes"),
                              phenodata = GenoMeans) {
   
   # Get the mean data from the phenodata calculations list
-  Phenotypes <- phenodata$emmeans
+  Phenotypes <- phenodata$average
   
   # Transpose this data to match the csvsr format for r/qtl
   Phenotypes %<>% 
