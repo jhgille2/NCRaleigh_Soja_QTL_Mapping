@@ -1,0 +1,96 @@
+---
+title: "N/S Mapping progress"
+author: "Jay Gillenwater"
+date: "2/1/2022"
+output: 
+  html_document:
+    theme: journal
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+pacman::p_load(qtl, 
+               tidyverse)
+
+load("filled_genos_1000.RData")
+load("final_model.RData")
+load("final_qtl.RData")
+load("n_s_regression_imp_perms.RData")
+load("n_s_regression_imp.RData")
+```
+
+# Preliminary mapping results
+Here I want to present some preliminary mapping results I have for the average N/S phenotype and talk about how I'm thinking I should proceed with the rest of the analysis.
+
+## Single QTL methods
+The first mapping strategies I used were the ones designed for detecting single QTL, basically those with a significant effect on the phenotype when considered in isolation. I tried all three methods available in r/qtl for this (imputation, marker regression, and standard interval mapping). All three methods produced similar results. I'll show the lod profile for the scan that used the cross with multiple imputations. The lines show significance thresholds derived from 1000 permutations, the solid line is the 5% significance threshold and the dashed line is the 10% threshold. 
+
+```{r simProfiles, echo = FALSE, fig.dim = c(12, 6)}
+# Significance thresholds 5 and 10% based on permutations
+threshold_5_pct  <- summary(n_s_regression_imp_perms)[1]
+threshold_10_pct <- summary(n_s_regression_imp_perms)[2]
+
+plot(n_s_regression_imp)
+abline(h = threshold_5_pct)
+abline(h = threshold_10_pct, lty = 2)
+
+
+```
+
+No QTL pass the 5% threshold, but two pass the 10% level. 
+
+```{r sigQTL}
+
+# The significance thresholds derived via permutation
+summary(n_s_regression_imp_perms)
+
+# The QTL which pass the 10% significance threshold
+summary(n_s_regression_imp, 
+        perms = n_s_regression_imp_perms, 
+        alpha = 0.1)
+
+```
+
+Although only two QTL were detected with the single-qtl methods, I figured there was a good chance that I could find some more with multiple interval mapping. The end result of this is a multiple regression model where each variable in the model is a QTL and can give some insight not just into the effect sizes of each QTL, but also their relationship with other QTL, and their significance after the effects of other QTL have been accounted for. 
+
+I followed the general procedure described in the r/qtl manual (Ch.9) for fitting these models. In brief...  
+
+1. Use multiple imputation to complete the genotype data. 
+2. Perform many permutations with scantwoperm to calculate significance thresholds.  
+3. Use the stepwiseqtl (automated model search) function to search for a model using the imputed cross and the penalties derived from the permutation thresholds.  
+4. Use the fitqtl function to get model statistics from the starting model.  
+5. Drop terms from the model that aren't significant (low LOD)  
+6. Refine qtl positions in the smaller model, and then go back to step 4. Repeat until all terms are significant.  
+
+I followed these steps and ended up with the model below. 
+```{r MIM_fit}
+
+# Use fitqtl to calculate model statistics
+model_fit <- fitqtl(cross     = cross_1000_imp, 
+                    pheno.col = 2, 
+                    qtl       = refine_reduced_5, 
+                    formula   = model_reduced_5, 
+                    get.ests  = TRUE)
+
+# Summary stats of the model fit
+summary(model_fit, pvalues = FALSE)
+
+```
+
+Beyond the model fit statistics, I can also get a "profile lod plot" which illustrates the LOD profile of each QTL after controlling for the positions of other QTL in the model. Here is what the LOD profile plot looks like for this model. 
+
+```{r MIM_LodProfile, fig.dim = c(12, 6)}
+plotLodProfile(refine_reduced_5)
+
+```
+
+Using multiple interval mapping allowed for additional QTL to be detected, and also provided some insight into the architecture of the trait. 
+
+## What's next
+This analysis used just the average data for N/S ratio but we have data for each of the environments. I think it will be important to run the mapping analysis with the data from each of the environments. This will let us see both how consistent the significance and effect sizes of the QTL are across environments. 
+
+I'm working on formalizing my process of iterating through the models from the initial fit that used the automated to the final model but I think to some extent at least, I'll eventually have to go in and inspect each model "by hand". That being said, I can definitely keep the process organized (and reproducible), I just don't think it would be possible, and probably not a good idea to try to write a silver bullet function to automatically fit the model for each trait without some degree of supervision. I'm thinking that a good middle ground is just keeping a well-commented script for each model fit and I would still be able to work this into the pipeline I've already set up.
+
+On the theme of reproducibility, I've been looking into using [singularity](https://singularity-user-docs.readthedocs.io/en/latest/) since it seems like it would both let me containerize the whole analysis pipeline and environment, and also [deploy it to SCINet](https://scinet.usda.gov/guide/singularity) if the want/need arises. I think using singularity to manage the environment of the workflow and the targets package to organize the pipeline itself make for an amazing combination to be sure that everything stays reproducible and easily distributed. On a related note, I was able to get that small beowulf up and running in my apartment and have been reading through the scinet/NCSU HPC documentation to get as good of a mimic to their setup as I can to get head start on the more computationally intensive analysis/set up a HPC debugging test bed.
+
+One last thing that I thought could eventually be worth looking into down the line is to try to identify genes that underlie the markers closest to the QTL we find. It looks like [this is actively being added to rqtl2](https://kbroman.org/qtl2/assets/vignettes/user_guide.html#SNP_association) and given the data already available through soybase, it seemed like it would be worth looking into to add another layer to interpret the fit model. I think it would be especially worthwhile once we have more models fit to try to identify what genes contribute to a stable (or unstable) QTL. 
