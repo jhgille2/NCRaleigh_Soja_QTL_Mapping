@@ -1,0 +1,95 @@
+---
+title: "Marker regression results"
+author: "Jay Gillenwater"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+## target knits Rmds in their own session, so load libraries here.
+source(here::here("packages.R"))
+```
+
+```{r load-targets, include=FALSE}
+tar_load(Marker_regression_summary)
+tar_load(Marker_regression_results)
+```
+
+# Overview
+
+I ran a simple marker regression analysis on all the phenotypes in the data set. This performs a simple association test at the site of each marker in the cross. Markers are declared to be associated at some significance level at significance thresholds that were calculated with a permutation test that used 1000 permutations of the data. Below I will present the LOD profiles of this analysis and a table of the significant markers and their positions in the linkage map.  
+
+In the LOD plots below, the 10% significance threshold is indicated by the dashed line, and the 5% threshold is indicated by the solid line.
+
+```{r LodProfiles, echo = FALSE, message = FALSE, out.width=10}
+
+# A function to parse the "location" column. This column has the 
+# long and cumbersome names that I used to keep track of the location
+# and the trait together. Now, simplify this into a more readible 
+# format
+extract_location_name <- function(longLocName){
+  shortLocName <- ifelse(str_detect(longLocName, "LA_"), "LA", 
+                         ifelse(str_detect(longLocName, "SAN_"), "SAN", 
+                                ifelse(str_detect(longLocName, "MS_"), "MS", 
+                                       ifelse(str_detect(longLocName, "CLA_"), "CLA", 
+                                              ifelse(str_detect(longLocName, "SC_"), "SC", "Average")))))
+  
+  return(shortLocName)
+}
+
+
+# Next, a function to make a set of LOD plots 
+# with the 5% and 10% significance thresholds 
+# shown with soplid and dashed lines, respectively
+make_lod_plot <- function(mr_result, pheno_name){
+  
+   # Pull aside the results and permutations for clearer code
+  perms   <- pluck(mr_result, "perms")
+  results <- pluck(mr_result, "result")
+  
+  # Get the 5% and 10% significance thresholds from the permutations
+  perm_summaries <- summary(perms)
+  
+  for(i in 1:ncol(perm_summaries)){
+    
+    # Get the significance thresholds for the current scan from the 
+    # summary.scanoneperm table
+    sig_5_pct  <- perm_summaries[1, i]
+    sig_10_pct <- perm_summaries[2, i]
+    
+    # Get the location name from the column names of the permutation summaries
+    Loc <- extract_location_name(colnames(perm_summaries)[[i]])
+    
+    # Make a title from the location and phenotype name
+    title <- paste(Loc, pheno_name, sep = " - ")
+    
+    # Plot the LOD profile
+    plot(results, 
+         lodcolumn = i, 
+         ylab = "LOD", 
+         main = title, 
+         ylim = c(0, (sig_5_pct + 0.5)))
+    
+    # Add a dashed line for the 10% threshold and a solid line for the 5% threshold
+    abline(h = sig_5_pct)
+    abline(h = sig_10_pct, lty = 2)
+    
+  }
+}
+
+walk2(Marker_regression_results, names(Marker_regression_results), make_lod_plot)
+
+```
+
+
+Below is a table of the QTL detected at a threshold of alpha = 0.1 within each environment, for each phenotype. 
+```{r SigQTL_table, echo = FALSE}
+
+Marker_regression_summary %>% 
+  mutate(across(where(is.numeric), ~ round(.x, 2))) %>% 
+  kbl(caption = "QTL detected at alpha = 0.1") %>% 
+  kable_material(c("striped", "hover"))
+
+```
