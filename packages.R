@@ -35,7 +35,9 @@ pacman::p_load(conflicted,
                progressr, 
                tictoc, 
                snow, 
-               parallel)
+               parallel, 
+               job, 
+               kableExtra)
 
 # Conflict preferences
 conflict_prefer("filter", "dplyr")

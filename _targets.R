@@ -84,8 +84,23 @@ tar_plan(
   tar_target(LinkageMapSummaries, 
              summarise_linkage_map(lmap = LinkageMap)),
   
+  ## Section: QTL Mapping
+  ##################################################
+  
+  # Marker regression by trait
+  tar_target(Marker_regression_results, 
+             qtl_map_regression(LinkageMap)), 
+  
+  # Summarize the marker regression results
+  tar_target(Marker_regression_summary, 
+             summarise_makrer_regression(Marker_regression_results)),
+  
   ## Section: Document rendering
   ##################################################
-  tar_render(progress_report, "doc/progress_report.Rmd")
+  tar_render(progress_report, 
+             "doc/progress_report.Rmd"), 
+  
+  tar_render(Marker_Regression_Report, 
+             "doc/Marker Regression Results.Rmd")
 
 )

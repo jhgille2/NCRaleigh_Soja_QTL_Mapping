@@ -9,7 +9,10 @@ EDA_tables|stem|EDA_tables|0|skipped
 EDA_Plots|stem|EDA_Plots|0|skipped
 GenoMeans|stem|GenoMeans|0|skipped
 Phenotype_Export|stem|Phenotype_Export|0|skipped
-LinkageMap|stem|LinkageMap|0|started
-LinkageMap|stem|LinkageMap|0|built
+LinkageMap|stem|LinkageMap|0|skipped
+Marker_regression_results|stem|Marker_regression_results|0|skipped
 LinkageMapSummaries|stem|LinkageMapSummaries|0|skipped
+Marker_regression_summary|stem|Marker_regression_summary|0|skipped
 progress_report|stem|progress_report|0|skipped
+Marker_Regression_Report|stem|Marker_Regression_Report|0|started
+Marker_Regression_Report|stem|Marker_Regression_Report|0|errored

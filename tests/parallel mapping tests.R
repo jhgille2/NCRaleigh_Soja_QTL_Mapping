@@ -2,7 +2,7 @@ tar_load(LinkageMap)
 
 map_simgeno <- sim.geno(LinkageMap, n.draws = 500, map.function = "kosambi")
 
-scantwo_perms <- scantwo(LinkageMap, pheno.col = 2, method = "hk", n.perm = 1000, n.cluster = 10)
+job::job({scantwo_perms_nitrogen = scantwo(LinkageMap, pheno.col = 4, method = "hk", n.perm = 1000, n.cluster = 10)})
 scantwo_pens <- calc.penalties(scantwo_perms)
 
 LinkageMap <- calc.genoprob(LinkageMap)
@@ -28,9 +28,14 @@ future::plan(multisession, workers = 5)
 filled_genos <- future_map(drawnums, function(x) sim.geno(LinkageMap, n.draws = x, map.function = "kosambi"), .options = furrr_options(seed = TRUE))
 all_stepwise <- future_map(filled_genos, function(x) stepwiseqtl(x, pheno.col = 2, max.qtl = 20, method = "imp", penalties = scantwo_pens), .options = furrr_options(seed = TRUE))
 
+n_s_refine <- function(Cross, Qtl){
+  refineqtl(cross = Cross, pheno.col = 2, qtl = Qtl)
+}
 
-test <- fitqtl(filled_genos[[1]], pheno.col = 2, qtl = all_stepwise[[1]])
-test2 <- dropfromqtl(all_stepwise[[1]], which(test$result.drop[, 7] > 0.05))
+all_refined <- future_map2(filled_genos, all_stepwise, n_s_refine, .options = furrr_options(seed = TRUE))
+
+ref_1000_imp <- refineqtl(filled_genos[[5]], pheno.col = 2, qtl = all_stepwise[[5]])
+
 
 # A function to drop non-significant (pvalue(F) > 0.05) from the fit model and 
 # return the new model minus these terms
@@ -64,4 +69,6 @@ test_nitrogen_hk_stepwise <- stepwiseqtl(calc.genoprob(LinkageMap),
                                          max.qtl = 20, 
                                          method = "hk", 
                                          keeplodprofile = TRUE, 
-                                         penalties = calc.penalties(scantwo_perms))
+                                         penalties = calc.penalties(scantwo_perms_nitrogen))
+
+
