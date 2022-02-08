@@ -23,7 +23,7 @@ I ran a simple marker regression analysis on all the phenotypes in the data set.
 
 In the LOD plots below, the 10% significance threshold is indicated by the dashed line, and the 5% threshold is indicated by the solid line.
 
-```{r LodProfiles, echo = FALSE, message = FALSE, out.width=10}
+```{r LodProfiles, echo = FALSE, message = FALSE}
 
 # A function to parse the "location" column. This column has the 
 # long and cumbersome names that I used to keep track of the location

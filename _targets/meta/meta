@@ -64,7 +64,7 @@ make_eda_plots|function|920d80d068e3200c||||||||||||||
 clean_genotypes|function|68def2625d7147b2||||||||||||||
 export_genotype|function|915e453a46a41a26||||||||||||||
 make_eda_tables|function|f25bcf8ac1b6966a||||||||||||||
-.Random.seed|object|361d6ddee999030e||||||||||||||
+.Random.seed|object|51efb621b4051306||||||||||||||
 summarise_linkage_map|function|7f40238ebae5cce2||||||||||||||
 clean_sojaparent|function|c1ec543bda6def14||||||||||||||
 qtl_map_regression|function|602644d705025ccd||||||||||||||
@@ -76,4 +76,4 @@ summarise_makrer_regression|function|17b6b3d356d200c0||||||||||||||
 create_bcsft|function|8b75f67bd11a6d6e||||||||||||||
 calc_geno_means|function|9d8334a3c19682a9||||||||||||||
 make_linkage_map|function|8b60d955354c19b6||||||||||||||
-Marker_Regression_Report|stem|002dff1346539dfc|9958efb970260588|fefb4fc275d403b0|-817525239|doc/Marker_Regression_Results.html*doc/Marker_Regression_Results.Rmd|t19031.1579250176s|0c9ca6d40114ed53|1474969|file|vector|||3.72||
+Marker_Regression_Report|stem|45966a3849afa9ca|9958efb970260588|fefb4fc275d403b0|-817525239|doc/Marker_Regression_Results.html*doc/Marker_Regression_Results.Rmd|t19031.5035964659s|d4ceaac08f12d52c|1474979|file|vector|||4.15||
