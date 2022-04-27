@@ -1,6 +1,7 @@
 name|type|parent|branches|progress
 Genotype_data|stem|Genotype_data|0|skipped
 New_Genotype_data|stem|New_Genotype_data|0|skipped
+Genotype_data_24_samples|stem|Genotype_data_24_samples|0|skipped
 Phenotype_Data|stem|Phenotype_Data|0|skipped
 Cleaned_Genotypes|stem|Cleaned_Genotypes|0|skipped
 Read_and_clean|stem|Read_and_clean|0|skipped
@@ -10,9 +11,12 @@ EDA_Plots|stem|EDA_Plots|0|skipped
 GenoMeans|stem|GenoMeans|0|skipped
 Phenotype_Export|stem|Phenotype_Export|0|skipped
 LinkageMap|stem|LinkageMap|0|skipped
-Marker_regression_results|stem|Marker_regression_results|0|skipped
+Marker_regression_results|stem|Marker_regression_results|0|started
+Marker_regression_results|stem|Marker_regression_results|0|built
 LinkageMapSummaries|stem|LinkageMapSummaries|0|skipped
-Marker_regression_summary|stem|Marker_regression_summary|0|skipped
-progress_report|stem|progress_report|0|skipped
+Marker_regression_summary|stem|Marker_regression_summary|0|started
+Marker_regression_summary|stem|Marker_regression_summary|0|built
+progress_report|stem|progress_report|0|started
+progress_report|stem|progress_report|0|built
 Marker_Regression_Report|stem|Marker_Regression_Report|0|started
 Marker_Regression_Report|stem|Marker_Regression_Report|0|built

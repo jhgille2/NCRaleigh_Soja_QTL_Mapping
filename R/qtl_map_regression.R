@@ -15,7 +15,7 @@ qtl_map_regression <- function(LinkageMap) {
   }
   
   # Apply the function to get a list of numeric indices for each phenotype
-  phenos <- c("n_s", "sulfur", "nitrogen", "carbon")   
+  phenos <- c("n_s", "c_n", "sulfur", "nitrogen", "carbon")   
   all_pheno_indices <- map(phenos, get_pheno_indices) %>% 
     set_names(phenos)
   

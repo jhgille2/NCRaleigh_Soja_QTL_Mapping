@@ -28,14 +28,14 @@ make_linkage_map <- function(genodata = Cleaned_Genotypes, phenodata =
   snpData_cross_segdist  <- pullCross(snpData_cross, type = "seg.distortion", pars = list(seg.thresh = 0.001))
   snpData_cross_noMiss_5 <- pullCross(snpData_cross_segdist, type = "missing", pars = list("miss.thresh" = 0.05))
   
-  # Genotype clones
+  # Genotype clones (No genetic clones in current data set)
   gc <- genClones(snpData_cross_noMiss_5, id = "id")
   
   # Remove clones
-  snpData_cross_noMiss_5 <- fixClones(snpData_cross_noMiss_5, 
-                                      gc$cgd, 
-                                      consensus = TRUE, 
-                                      id = "id")
+  # snpData_cross_noMiss_5 <- fixClones(snpData_cross_noMiss_5, 
+  #                                     gc$cgd, 
+  #                                     consensus = TRUE, 
+  #                                     id = "id")
   
   # Remove any individuals with more than 10% missing marker data
   sg_miss <- statGen(snpData_cross_noMiss_5, id = "id", stat.type = "miss", bychr = FALSE)
@@ -47,26 +47,26 @@ make_linkage_map <- function(genodata = Cleaned_Genotypes, phenodata =
                                              anchor = TRUE)
   
   # Chromosomes to keep 
-  keep_chrs <- c("1.1", 
+  keep_chrs <- c("1", 
                  "2.1", 
-                 "3.1", 
+                 "3", 
                  "4", 
-                 "5.2", 
-                 "6.1", 
+                 "5", 
+                 "6", 
                  "7.1", 
-                 "8.1", 
+                 "8", 
                  "9.1", 
-                 "10.1", 
-                 "11.1", 
-                 "12.2", 
+                 "10", 
+                 "11", 
+                 "12", 
                  "13.1", 
                  "14", 
-                 "15.1", 
+                 "15", 
                  "16.1", 
                  "17.1", 
-                 "18.1", 
-                 "19.1", 
-                 "20.1")
+                 "18", 
+                 "19", 
+                 "20")
   
   # Subset the map and keep only the markers that group to the main chromosomes
   lg_remainders <- as.numeric(chrnames(snpData_mst_pass1_anchor)) %% 1

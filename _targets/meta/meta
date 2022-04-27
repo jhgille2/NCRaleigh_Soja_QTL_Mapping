@@ -1,79 +1,38 @@
-name|type|data|command|depend|seed|path|time|size|bytes|format|iteration|parent|children|seconds|warnings|error
-Writeup|stem|8079993c8e7ef7bb|9ca246d2d0eabb10|19561918ab928e9c|-2019501384|docs/Notebook.pdf*docs/Notebook.Rmd|t18868.7029107966s|91417057c9d75a9d|188085|file|vector|||5.82||
-CrossData|stem|0013df39b098dc02|a34ae411f147213d|090fb182870efe9e|1988651529||t18868.703323193s|c3bc3d15846f0d80|280423|rds|vector|||4.86|Some chromosomes  1000 cM in length there may be a problem with the genetic map.  Perhaps it is in basepairs|
-all_bcsft|object|e55e4cefe8368dbd||||||||||||||
-bcsft_QC_0.1_0.1_59768ae5|branch||d1d1509dbaad8276|38c7668424788b7a|-866403627||||0|rds|vector|bcsft_QC_0.1_0.1||4.22|package future was built under R version 4.1.1|Pulling of markers is not supported for this population type, see pullCross.
-bcsftCross_5|stem|5c652d014f3cc1cd|4718448443b8f196|0ddd309093fabf5f|1599480780||t18868.7525899383s|c161d9e619f3a5ab|145478|rds|vector|||228.81|package future was built under R version 4.1.1|
-bcsftCross_4|stem|544d202b15715c42|f54dfd0f7231ac0a|0ddd309093fabf5f|1561927506||t18868.7527300656s|6c870ac3febeb285|143685|rds|vector|||241.19|package future was built under R version 4.1.1|
-bcsft_QC_0.1_0.1_e842d043|branch||d1d1509dbaad8276|6461a5dca7ecb8ff|-1204794832||||0|rds|vector|bcsft_QC_0.1_0.1||0||Pulling of markers is not supported for this population type, see pullCross.
-bcsft_combined|stem|b236a6b7ea4ed507|0b6c26c5f2fd25d0|b046435db5fbe19c|-127632322||t18868.7722367587s|35602ff587f60008|289076|rds|list||bcsft_combined_3e303b4b*bcsft_combined_dc7281c4|0||
-bcsft_QC_0.1_0.1|pattern|dc253a396a90b97f|d1d1509dbaad8276||-1648523419||||1040|rds|vector||bcsft_QC_0.1_0.1_acca8652*bcsft_QC_0.1_0.1_4f5b8fb2|15.1||
-bcsft_QC_0.025_0.05|pattern|efd978607ceb4873|0998c25e11b80189||1035987680||||1044|rds|vector||bcsft_QC_0.025_0.05_acca8652*bcsft_QC_0.025_0.05_4f5b8fb2|14.23||
-bcsft_QC_0.025_0.025|pattern|628f0bf577072c28|ec351ba4a1516258||773723497||||1042|rds|vector||bcsft_QC_0.025_0.025_acca8652*bcsft_QC_0.025_0.025_4f5b8fb2|14.16||
-bcsft_QC_0.025_0.1|pattern|c63b2e3443929b6f|1a97bdc02657bbb5||2047337113||||1042|rds|vector||bcsft_QC_0.025_0.1_acca8652*bcsft_QC_0.025_0.1_4f5b8fb2|13.73||
-bcsft_QC_0.05_0.025|pattern|4b30feeac4785c50|dfc8531991840a3c||1036767566||||1061|rds|vector||bcsft_QC_0.05_0.025_acca8652*bcsft_QC_0.05_0.025_4f5b8fb2|15.13||
-bcsft_QC_0.05_0.05|pattern|ea949b65bca87e4e|c5972d254b51aa78||828692193||||1048|rds|vector||bcsft_QC_0.05_0.05_acca8652*bcsft_QC_0.05_0.05_4f5b8fb2|15.38||
-bcsft_QC_0.05_0.1|pattern|431eb793e3024d4d|7c769bb6178ff2a1||-1133984252||||1065|rds|vector||bcsft_QC_0.05_0.1_acca8652*bcsft_QC_0.05_0.1_4f5b8fb2|15.12||
-bcsft_QC_0.1_0.025|pattern|ebe3e263efaaebf8|2f0f7a7f78ffdc5b||-686013120||||1050|rds|vector||bcsft_QC_0.1_0.025_acca8652*bcsft_QC_0.1_0.025_4f5b8fb2|14.08||
-bcsft_QC_0.1_0.05|pattern|8f6e8e2e031c49b8|9dca6c7fc771e1fd||-161284105||||1063|rds|vector||bcsft_QC_0.1_0.05_acca8652*bcsft_QC_0.1_0.05_4f5b8fb2|12.87||
-bcsft_QC_0.1_0.1_acca8652|branch|7d014e277efe5f2d|d1d1509dbaad8276|09e241e944941a32|761722535||t18868.7834027865s|5b78dc0f11b5c7a1|528|rds|vector|bcsft_QC_0.1_0.1||7.64|Some markers at the same position on chr 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 use jittermap.|
-bcsft_QC_0.1_0.1_4f5b8fb2|branch|03cc8c33f009c617|d1d1509dbaad8276|5b41a733134f0613|-58289874||t18868.7834058305s|0a48d1315f2197ad|512|rds|vector|bcsft_QC_0.1_0.1||7.46|Some markers at the same position on chr 1,9 use jittermap.|
-bcsft_QC_0.025_0.05_acca8652|branch|874abf9d377f33bc|0998c25e11b80189|09e241e944941a32|-199449525||t18868.7834062471s|2bca963e40c13baf|529|rds|vector|bcsft_QC_0.025_0.05||7.09|Some markers at the same position on chr 1,3,5,6,9,10,11,12,13,14,16,17,18,20 use jittermap.|
-bcsft_QC_0.025_0.05_4f5b8fb2|branch|988516c28fcb0896|0998c25e11b80189|5b41a733134f0613|1005360062||t18868.7834066407s|d931c6362b6ee884|515|rds|vector|bcsft_QC_0.025_0.05||7.14|Some markers at the same position on chr 1,9 use jittermap.|
-bcsft_QC_0.025_0.025_acca8652|branch|f814577c251ebe4b|ec351ba4a1516258|09e241e944941a32|1879138208||t18868.7834069995s|02584073a65a5b69|521|rds|vector|bcsft_QC_0.025_0.025||7.02|Some markers at the same position on chr 1,3,5,6,9,10,11,12,13,14,16,17,18,20 use jittermap.|
-bcsft_QC_0.025_0.025_4f5b8fb2|branch|43fef8769cead158|ec351ba4a1516258|5b41a733134f0613|-136071429||t18868.783513643s|02584073a65a5b69|521|rds|vector|bcsft_QC_0.025_0.025||7.14|Some markers at the same position on chr 1,9 use jittermap.|
-bcsft_QC_0.025_0.1_acca8652|branch|c1be6febd90539d0|1a97bdc02657bbb5|09e241e944941a32|216780883||t18868.7835140712s|2713ecd31269f3fd|523|rds|vector|bcsft_QC_0.025_0.1||6.92|Some markers at the same position on chr 1,3,5,6,9,10,11,12,13,14,16,17,18,20 use jittermap.|
-bcsft_QC_0.025_0.1_4f5b8fb2|branch|090fe6dc66b7f88b|1a97bdc02657bbb5|5b41a733134f0613|1239539052||t18868.7835145805s|038a11f3ec5bb5aa|519|rds|vector|bcsft_QC_0.025_0.1||6.81|Some markers at the same position on chr 1,9 use jittermap.|
-bcsft_QC_0.05_0.025_acca8652|branch|8ca71a60413ea583|dfc8531991840a3c|09e241e944941a32|-1082482006||t18868.7835268606s|a499bc0a720c1d03|534|rds|vector|bcsft_QC_0.05_0.025||7.6|Some markers at the same position on chr 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 use jittermap.|
-bcsft_QC_0.05_0.025_4f5b8fb2|branch|0a161288fc3e21cd|dfc8531991840a3c|5b41a733134f0613|1451283022||t18868.7835314208s|baf54d81357dfb87|527|rds|vector|bcsft_QC_0.05_0.025||7.53|Some markers at the same position on chr 1,9 use jittermap.|
-bcsft_QC_0.05_0.05_acca8652|branch|ef1b2a33914d2f16|c5972d254b51aa78|09e241e944941a32|-643059331||t18868.7836666065s|2f0009a747df5f48|532|rds|vector|bcsft_QC_0.05_0.05||7.72|Some markers at the same position on chr 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 use jittermap.|
-bcsft_QC_0.05_0.05_4f5b8fb2|branch|78edd0dd28df72d8|c5972d254b51aa78|5b41a733134f0613|-364267833||t18868.7836694653s|9957a5e3ddf55119|516|rds|vector|bcsft_QC_0.05_0.05||7.66|Some markers at the same position on chr 1,9 use jittermap.|
-bcsft_QC_0.05_0.1_acca8652|branch|27e4b004599fd430|7c769bb6178ff2a1|09e241e944941a32|-1403953380||t18868.7836698241s|aadb529ce9fe9359|533|rds|vector|bcsft_QC_0.05_0.1||7.62|Some markers at the same position on chr 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 use jittermap.|
-bcsft_QC_0.05_0.1_4f5b8fb2|branch|c8f5766591065a26|7c769bb6178ff2a1|5b41a733134f0613|285064445||t18868.7836702408s|2f0009a747df5f48|532|rds|vector|bcsft_QC_0.05_0.1||7.5|Some markers at the same position on chr 1,9 use jittermap.|
-bcsft_QC_0.1_0.025_acca8652|branch|d5a0ff7c8c31a080|2f0f7a7f78ffdc5b|09e241e944941a32|-935139697||t18868.7836705764s|078fc2649bd32bbc|525|rds|vector|bcsft_QC_0.1_0.025||7.6|Some markers at the same position on chr 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 use jittermap.|
-bcsft_QC_0.1_0.025_4f5b8fb2|branch|fda743bac95bf226|2f0f7a7f78ffdc5b|5b41a733134f0613|-1288518900||t18868.7837631343s|078fc2649bd32bbc|525|rds|vector|bcsft_QC_0.1_0.025||6.48|Some markers at the same position on chr 1,9 use jittermap.|
-bcsft_QC_0.1_0.05_acca8652|branch|60e12230b18f7e78|9dca6c7fc771e1fd|09e241e944941a32|1764454766||t18868.7837678681s|7bdbe5fa48d729d8|536|rds|vector|bcsft_QC_0.1_0.05||6.42|Some markers at the same position on chr 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 use jittermap.|
-bcsft_QC_0.1_0.05_4f5b8fb2|branch|a63ea74ff50eba73|9dca6c7fc771e1fd|5b41a733134f0613|-370481301||t18868.7837709238s|baf54d81357dfb87|527|rds|vector|bcsft_QC_0.1_0.05||6.45|Some markers at the same position on chr 1,9 use jittermap.|
-all_snp_QC|stem|76f0eac72ff6d056|892d35d17f524ebc|33579f5654debe47|-1098954133||t18868.7851282755s|747b3a60e937f507|2115|rds|vector|||0||
-bcsft_mapped|object|5ef2e85b8f8b049b||||||||||||||
-cross_qc_mapped|object|fee91d61acffb74e||||||||||||||
-Journal|stem|7e7720b45a208716|398fa396dc0fab1b|4745aa592080ea1d|2069068383|docs/Journal.pdf*docs/Journal.Rmd|t18868.7014927518s||139974|file|vector|||1.22|pdflatex not found|LaTeX failed to compile Journal.tex. See httpsyihui.orgtinytexrdebugging for debugging tips.
-ABH_Genotypes|stem|ea7b4282cf30cc90|f0832577e35f14df|bd8e41e222507e08|395883487||t18980.7305535158s|e971abdfae4531a5|365514|rds|vector|||2.25||
-Genotype_Export|stem|138a8486684582dc|878fa4d071bca020|c8624383f6e3b84c|1250031270|C:/Users/Jay/Documents/R/Projects/NCRaleigh_Soja_QTL_Mapping/data/rqtl_genotypes.csv|t18980.7305610433s|6ef97a2a4278ef51|4113304|file|vector|||0.6||
-Genotype_data|stem|ce76468dc5dc049e|5cb4ade354ee84d6|4e3739ef91745af0|-1683357613|C:/Users/Jay/Documents/R/Projects/NCRaleigh_Soja_QTL_Mapping/data/snp_matrix_AB.csv|t18980.7825005524s|8b47d37dd3154ed0|3505972|file|vector|||0||
-New_Genotype_data|stem|7b110452f21b2d5e|fcd88ebe0a1e1242|4e3739ef91745af0|1126238440|C:/Users/Jay/Documents/R/Projects/NCRaleigh_Soja_QTL_Mapping/data/new_samples_AB.csv|t18980.8029433137s|731a7e42627ee0a4|165855|file|vector|||0||
-Cleaned_Genotypes|stem|841f720fc5eb08ab|7e68c13fa5470183|666b82f35daeb68f|1423025236|C:/Users/Jay/Documents/R/Projects/NCRaleigh_Soja_QTL_Mapping/data/fullgenodata.csv|t19008.8547430487s|ed91a5211fa61312|3436234|file|vector|||4.2|NAs introduced by coercion|
-Phenotype_Export|stem|e90e406dda5ce984|3f79ed3858167970|878466a2a90b0d19|51487610|C:/Users/Jay/Documents/R/Projects/NCRaleigh_Soja_QTL_Mapping/data/rqtl_phenotypes.csv|t19015.9244142209s|41bd94628c32f47a|40251|file|vector|||0.02||
-LinkageMapSummaries|stem|d74919b19c9f1001|581dcbfec3e6992a|eeb82a27eb1d4d75|313265344||t19015.9244427404s|607ca56a8b211efc|569|rds|vector|||0||
-LinkageMap|stem|9359d841a477783e|4e36f0abf00c50e0|8aca159817f77cb5|828579306||t19015.9530077948s|27b97e465162157c|101166|rds|vector|||2.69|Some chromosomes  1000 cM in length there may be a problem with the genetic map.  Perhaps it is in basepairs|
-Phenotype_Data|stem|62edfad26e198166|ca9394b1418f74d1|4e3739ef91745af0|-1631356419|C:/Users/Jay/Documents/R/Projects/NCRaleigh_Soja_QTL_Mapping/data/Pheno_five_locations.xlsx|t19021.8670741891s|ef1861e9d0c7a030|912064|file|vector|||0||
-Read_and_clean|stem|fcd7e85017454060|ff08b2f61da7e294|9c9774300c3e7a4d|-1237808111||t19031.0851885327s|0de138d05b11bc25|41524|rds|vector|||0.54|40 parsing failures.row col expected   actual261   a number standard262   a number standard263   a number standard264   a number standard265   a number standard... ... ........ ........See problems... for more details.|
-RemoveErrors|stem|018e0ff4b62ce10d|57bb471df8e21a3e|2f96ea306a3cff4f|-37157053||t19031.0851887989s|68f39f06d00edfa1|41489|rds|vector|||0.02||
-EDA_tables|stem|7675c80b59ca7a4a|5961b4f9a840982d|c5aad16bb87cd515|-69911740||t19031.0851889031s|3bd8f66805fd112b|45|rds|vector|||0||
-EDA_Plots|stem|13bb1c0656f9dc84|a325f97ff11b6feb|5f09c876f494dc0e|-176521336||t19031.0851907317s|b9b069fd5b965011|664433|rds|vector|||0.05||
-GenoMeans|stem|cdc56780b182eeb1|e6999ad9620d177b|3ffba03e8dd85a94|-1655100692||t19031.0853479226s|b507d77fabd25ce5|48863|rds|vector|||13.55||
-Marker_regression_results|stem|de7dc5bc083a2a8b|1b7fc459fb723736|4bc647c0cd4331f7|-677125728||t19031.0870171562s|14af171ce58b5438|602514|rds|vector|||84.82|Dropping 18 individuals with missing phenotypes.|
-progress_report|stem|612381891a7c0b5b|5a069ebda38ae72a|2af2db6885b38bb4|-174455922|doc/progress_report.html*doc/progress_report.Rmd|t19031.0870808701s|ef549d4dca67bd6f|1036648|file|vector|||5.53|cols is now required when using unnest.Please use cols  clab.data|
-Marker_regression_summary|stem|efa228588fe7f543|972f0dff69040ced|231d39d19aba0042|1661016034||t19031.1321619786s|21f230cbf3737a5e|1042|rds|vector|||0.12||
-Marker_Regression_Results|stem|f47ede4a9a54053f|c1f7be4b2b89986d|fefb4fc275d403b0|1197930675|Marker-Regression-Results.html*doc/Marker Regression Results.Rmd|t19031.1321593401s||734850|file|vector|||0.77||argument of length 0
-export_phenotype|function|175465c5da05cb02||||||||||||||
-extract_location_name|function|eba6dc3f20440f9e||||||||||||||
-read_to_cross|function|6592b1664a420919||||||||||||||
-remove_bad_samples|function|aae70768b693b2d1||||||||||||||
-make_eda_plots|function|920d80d068e3200c||||||||||||||
-clean_genotypes|function|68def2625d7147b2||||||||||||||
-export_genotype|function|915e453a46a41a26||||||||||||||
-make_eda_tables|function|f25bcf8ac1b6966a||||||||||||||
-.Random.seed|object|51efb621b4051306||||||||||||||
-summarise_linkage_map|function|7f40238ebae5cce2||||||||||||||
-clean_sojaparent|function|c1ec543bda6def14||||||||||||||
-qtl_map_regression|function|602644d705025ccd||||||||||||||
-add_phenotype_name|function|5aae52db83cb4d51||||||||||||||
-read_clean|function|979624b79384c75c||||||||||||||
-apply_marker_filters|function|450e200de55b2d2e||||||||||||||
-prep_genotype_data|function|dc03ff7ab2884d57||||||||||||||
-summarise_makrer_regression|function|17b6b3d356d200c0||||||||||||||
-create_bcsft|function|8b75f67bd11a6d6e||||||||||||||
-calc_geno_means|function|9d8334a3c19682a9||||||||||||||
-make_linkage_map|function|8b60d955354c19b6||||||||||||||
-Marker_Regression_Report|stem|45966a3849afa9ca|9958efb970260588|fefb4fc275d403b0|-817525239|doc/Marker_Regression_Results.html*doc/Marker_Regression_Results.Rmd|t19031.5035964659s|d4ceaac08f12d52c|1474979|file|vector|||4.15||
+name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
+.Random.seed|object|ad66254b0bfaa27c|||||||||||||||
+add_phenotype_name|function|5aae52db83cb4d51|||||||||||||||
+apply_marker_filters|function|450e200de55b2d2e|||||||||||||||
+calc_geno_means|function|9d8334a3c19682a9|||||||||||||||
+clean_genotypes|function|68def2625d7147b2|||||||||||||||
+clean_sojaparent|function|c1ec543bda6def14|||||||||||||||
+Cleaned_Genotypes|stem|473613ad06642935|f9e58fc80861cf83|5bfa5f3033b7f6b0|1423025236|C:/Users/jhgille2/Documents/R/projects/NCRaleigh_Soja_QTL_Mapping/data/fullgenodata.csv|t19109.6049542877s|ed91a5211fa61312|3436234|file|local|vector|||4.72|NAs introduced by coercion|
+create_bcsft|function|8b75f67bd11a6d6e|||||||||||||||
+EDA_Plots|stem|81c18fea3e2cde0e|a325f97ff11b6feb|2e53761c9a923562|-176521336||t19109.6082588109s|e893e7ec276762d9|788957|rds|local|vector|||0.11||
+EDA_tables|stem|72ebc9f3cb3b3ec3|5961b4f9a840982d|a53406951644dfa0|-69911740||t19109.6082554315s|3bd8f66805fd112b|45|rds|local|vector|||0||
+export_genotype|function|915e453a46a41a26|||||||||||||||
+export_phenotype|function|175465c5da05cb02|||||||||||||||
+extract_location_name|function|eba6dc3f20440f9e|||||||||||||||
+GenoMeans|stem|30c8c4438ee9fccc|e6999ad9620d177b|b40f2d303550046d|-1655100692||t19109.5662190689s|fe589de6636fc196|64934|rds|local|vector|||20.03||
+Genotype_data|stem|ce76468dc5dc049e|5cb4ade354ee84d6|4e3739ef91745af0|-1683357613|C:/Users/jhgille2/Documents/R/projects/NCRaleigh_Soja_QTL_Mapping/data/snp_matrix_AB.csv|t19109.5300449407s|8b47d37dd3154ed0|3505972|file|local|vector|||0||
+Genotype_data_24_samples|stem|38e4abd9123cd0d2|d4d20e8104fd96da|4e3739ef91745af0|1292173636|C:/Users/jhgille2/Documents/R/projects/NCRaleigh_Soja_QTL_Mapping/data/samples_24_AB.csv|t19109.5529289262s|92756902e45956fd|544211|file|local|vector|||0||
+LinkageMap|stem|7f1b41f783f12a9d|4e36f0abf00c50e0|63fd1145cde6cdc9|828579306||t19109.6083055514s|2a91302904e45e7e|115623|rds|local|vector|||3.99|Some chromosomes  1000 cM in length there may be a problem with the genetic map.  Perhaps it is in basepairs. Chisquared approximation may be incorrect. Chisquared approximation may be incorrect. Chisquared approximation may be incorrect|
+LinkageMapSummaries|stem|2ac54f91b769ea2d|581dcbfec3e6992a|46d1b1fab7a3d4fd|313265344||t19109.5760631111s|44c4e97fd154a74a|570|rds|local|vector|||0.02||
+make_eda_plots|function|920d80d068e3200c|||||||||||||||
+make_eda_tables|function|f25bcf8ac1b6966a|||||||||||||||
+make_linkage_map|function|3c2571b25bc45853|||||||||||||||
+Marker_Regression_Report|stem|6ea9e918e75c533e|9958efb970260588|ebd00ce24b91751a|-817525239|doc/Marker_Regression_Results.html*doc/Marker_Regression_Results.Rmd|t19109.6142430118s|86335408bb621e98|1573280|file|local|vector|||9.36||
+Marker_regression_results|stem|b5093f12a1fe61f8|1b7fc459fb723736|f96f3408d287cf5e|-677125728||t19109.6139659398s|e688b024a6cbb4ef|871544|rds|local|vector|||388.87|Dropping 21 individuals with missing phenotypes.. Dropping 20 individuals with missing phenotypes.. Dropping 1 individuals with missing phenotypes.. Dropping 22 individuals with missing phenotypes.. Dropping 21 individuals with missing phenotypes.. Dropping 20 individuals with missing phenotypes.. Dropping 1 individuals with missing phenotypes.. Dropping 22 individuals with missing phenotypes.. Dropping 21 individuals with missing phenotypes.. Dropping 20 individuals with missing phenotypes.. Dropping 1 individuals with missing phenotypes.. Dropping 22 individuals with missing phenotypes.. Dropping 21 individuals with missing phenotypes.. Dropping 20 individuals with missing phenotypes.. Dropping 1 individuals with missing phenotypes.. Dropping 22 individuals with missing phenotypes.. Dropping 21 individuals with missing phenotypes.. Dropping 20 individuals with missing phenotypes.. Dropping 1 individuals with missing phenotypes.. Dropping 22 individuals with missing phenotypes.|
+Marker_regression_summary|stem|486972224fcf4fea|972f0dff69040ced|83b6a0c3fe7e4cfc|1661016034||t19109.6139712426s|a5e07b233a4fac64|1478|rds|local|vector|||0.41||
+New_Genotype_data|stem|7b110452f21b2d5e|fcd88ebe0a1e1242|4e3739ef91745af0|1126238440|C:/Users/jhgille2/Documents/R/projects/NCRaleigh_Soja_QTL_Mapping/data/new_samples_AB.csv|t19109.5300435707s|731a7e42627ee0a4|165855|file|local|vector|||0||
+Phenotype_Data|stem|62edfad26e198166|ca9394b1418f74d1|4e3739ef91745af0|-1631356419|C:/Users/jhgille2/Documents/R/projects/NCRaleigh_Soja_QTL_Mapping/data/Pheno_five_locations.xlsx|t19109.5300345521s|ef1861e9d0c7a030|912064|file|local|vector|||0.02||
+Phenotype_Export|stem|a97330dfd324ed52|3f79ed3858167970|dd4ccf81a9dbd81f|51487610|C:/Users/jhgille2/Documents/R/projects/NCRaleigh_Soja_QTL_Mapping/data/rqtl_phenotypes.csv|t19109.566219519s|6e2c35dcd55f19a2|49848|file|local|vector|||0.02||
+prep_genotype_data|function|af2c8451ecb52d32|||||||||||||||
+progress_report|stem|760698bb4715fefc|5a069ebda38ae72a|66b19e67073e3867|-174455922|doc/progress_report.html*doc/progress_report.Rmd|t19109.6141370875s|0e7ca903c354196f|921707|file|local|vector|||14.64|Using bins  30 by default. Pick better value with the argument bins.. cols is now required when using unnest.Please use cols  clab.data. Using bins  30 by default. Pick better value with the argument bins.. cols is now required when using unnest.Please use cols  clab.data. Using bins  30 by default. Pick better value with the argument bins.. cols is now required when using unnest.Please use cols  clab.data|
+qtl_map_regression|function|e2259ac326b4b604|||||||||||||||
+Read_and_clean|stem|78152d88981b6dcc|ff08b2f61da7e294|274e71a01ded2602|-1237808111||t19109.5659862667s|af9785c32974c4f3|51704|rds|local|vector|||0.55|40 parsing failures.row col expected          actual237   a number Hi S Control   238   a number High           239   a number High S control 240   a number High S Standard241   a number low            ... ... ........ ...............See problems... for more details.. 49 parsing failures.row col expected       actual265   a number high control266   a number high control267   a number high control268   a number high control269   a number high control... ... ........ ............See problems... for more details.. 48 parsing failures.row col expected       actual299   a number hi control  300   a number Hi S Control301   a number Hi S Control302   a number high        303   a number high        ... ... ........ ............See problems... for more details.. 47 parsing failures.row col expected         actual286   a number High S Control287   a number High S control288   a number High S Control289   a number High S Control290   a number high S control... ... ........ ..............See problems... for more details.. 40 parsing failures.row col expected   actual261   a number standard262   a number standard263   a number standard264   a number standard265   a number standard... ... ........ ........See problems... for more details.|
+read_clean|function|da4f935a26891683|||||||||||||||
+read_to_cross|function|6592b1664a420919|||||||||||||||
+remove_bad_samples|function|aae70768b693b2d1|||||||||||||||
+RemoveErrors|stem|0b99f0fbe5edc754|57bb471df8e21a3e|3139a29e020ac0e5|-37157053||t19109.565986873s|dcc1f12ced6b500b|51664|rds|local|vector|||0.02||
+summarise_linkage_map|function|7f40238ebae5cce2|||||||||||||||
+summarise_makrer_regression|function|17b6b3d356d200c0|||||||||||||||

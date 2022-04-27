@@ -40,7 +40,8 @@ read_clean <- function(Phenotype_Data) {
       mutate(rep = 1:n()) %>% 
       ungroup() %>% 
       arrange(loc, code, rep) %>%
-      mutate(n_s_percent_ratio = percent_nitrogen/percent_sulfur)
+      mutate(n_s_percent_ratio = percent_nitrogen/percent_sulfur, 
+             c_n_percent_ratio = percent_carbon/percent_nitrogen)
     
     return(sheet)
   }

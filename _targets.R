@@ -30,6 +30,11 @@ tar_plan(
              here("data", "new_samples_AB.csv"), 
              format = "file"),
   
+  # A SNP file for a subset of samples that were remeasured
+  tar_target(Genotype_data_24_samples, 
+             here("data", "samples_24_AB.csv"), 
+             format = "file"),
+  
   ## Section: Phenotype processing/EDA
   ##################################################
   
@@ -56,8 +61,9 @@ tar_plan(
   ## Section: Cleaning genotype data
   ##################################################
   tar_target(Cleaned_Genotypes, 
-             prep_genotype_data(oldgenodata = Genotype_data, 
-                                newgenodata = New_Genotype_data), 
+             prep_genotype_data(oldgenodata       = Genotype_data, 
+                                newgenodata       = New_Genotype_data, 
+                                sample_remeasures = Genotype_data_24_samples), 
              format = "file"),
   
   ## Section: Export files for r/qtl
